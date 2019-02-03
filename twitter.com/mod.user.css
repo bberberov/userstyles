@@ -1,0 +1,88 @@
+/* ==UserStyle==
+@name           Twitter Mod
+@description    Userstyle for Twitter
+@version        0.0.1
+@author         Boian Berberov (https://github.com/bberberov)
+@license        EUPL-1.2
+@namespace      https://github.com/bberberov/userstyles
+@homepageURL    https://github.com/bberberov/userstyles
+@supportURL     https://github.com/bberberov/userstyles/issues
+@updateURL      https://raw.githubusercontent.com/bberberov/userstyles/master/twitter.com/mod.user.css
+@preprocessor   uso
+
+@advanced range icon-roundness     "Icon Roundness (%)"      [ 0, 0, 50,5, '%']
+@advanced range button-roundness   "Button Roundness (px)"   [10, 0,100,1,'px']
+@advanced range button-border-size "Button Border (px)"      [ 3, 1,  7,1,'px']
+@advanced range preview-size       "Preview Image Size (px)" [80,25,150,5,'px']
+==/UserStyle== */
+
+@-moz-document
+	domain("twitter.com")
+{
+/*** Icons ***/
+
+	/* twitter_core.bundle.css */
+	.avatar,
+	.avatar--circular,
+	.nav .session .dropdown-toggle,
+	.nav .session .dropdown-toggle:before,
+	.ProfileCard-avatarImage,
+	.ProfileCard-avatarLink,
+	.DashboardProfileCard-avatarImage,
+	.DashboardProfileCard-avatarLink,
+	{	border-radius: /*[[icon-roundness]]*/;	}
+
+	/* twitter_more_1.bundle.css */
+	.DMAvatar	{	border-radius: /*[[icon-roundness]]*/;	}
+
+	/* twitter_more_2.bundle.css */
+	.Avatar,
+	.ProfileAvatar,
+	.ProfileAvatar-image,
+	.ProfileAvatar-placeholderImage,
+	.ProfileCardMini-avatarImage,
+	.ProfileUserList .Avatar,
+	.RelatedUsers-users > .account-summary .avatar,
+	.ProfileAvatarEditing,
+	.ProfileAvatarEditing-button,
+	.ProfileAvatarEditing-overlay,
+	.ProfileAvatarEditing-image,
+	.ProfileAvatarEditing-placeholder,
+	.ProfileAvatarEditing-iframeSaving
+	{	border-radius: /*[[icon-roundness]]*/;	}
+
+/*** Buttons ***/
+
+	/* twitter_core.bundle.css */
+	.EdgeButton	{	border-radius: /*[[button-roundness]]*/;	}
+	.EdgeButton--secondary,
+	.EdgeButton--tertiary
+	{	border-width: /*[[button-border-size]]*/;	}
+
+/*** Links expansion ***/
+
+	/* twitter_core.bundle.css */
+	.twitter-timeline-link .invisible	{
+		font-size:   inherit;
+		line-height: inherit;
+	}
+
+	/* CUSTOM */
+	.twitter-timeline-link .tco-ellipsis	{	display: none;	}
+
+/*** Quoted Tweets expansion ***/
+
+	/* twitter_core.bundle.css */
+	.QuoteTweet-text	{	max-height: unset;	}
+
+/*** PhotoRail expansion ***/
+
+	/* twitter_more_2.bundle.css + CUSTOM */
+	.PhotoRail-mediaBox	{	max-height: unset;	}
+	.PhotoRail-mediaBox .tweet-media-img-placeholder,
+	.PhotoRail-mediaBox .tweet-media-img-placeholder > img
+	{
+		height: /*[[preview-size]]*/ !important;
+		width:  /*[[preview-size]]*/ !important;
+	}
+}
