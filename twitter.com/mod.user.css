@@ -29,7 +29,7 @@
 	.ProfileCard-avatarImage,
 	.ProfileCard-avatarLink,
 	.DashboardProfileCard-avatarImage,
-	.DashboardProfileCard-avatarLink,
+	.DashboardProfileCard-avatarLink
 	{	border-radius: /*[[icon-roundness]]*/;	}
 
 	/* twitter_more_1.bundle.css */
