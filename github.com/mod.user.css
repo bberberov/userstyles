@@ -1,0 +1,27 @@
+/* ==UserStyle==
+@name           GitHub Mod
+@description    Userstyle for GitHub
+@version        0.0.1
+@author         Boian Berberov (https://github.com/bberberov)
+@license        EUPL-1.2
+@namespace      https://github.com/bberberov/userstyles
+@homepageURL    https://github.com/bberberov/userstyles
+@supportURL     https://github.com/bberberov/userstyles/issues
+@updateURL      https://raw.githubusercontent.com/bberberov/userstyles/master/github.com/mod.user.css
+@preprocessor   uso
+==/UserStyle== */
+
+@-moz-document
+	domain("github.com")
+{
+/*** Signup banner removal ***/
+
+	/* site-<ID>.css */
+	.signup-prompt-bg	{	display: none;	}
+
+/*** Repository Summary expansion ***/
+
+	/* github-<ID>.css */
+	.stats-switcher-viewport	{	height: unset;	}
+	.stats-switcher-viewport.is-revealing-lang-stats .stats-switcher-wrapper	{	top: unset;	}
+}
