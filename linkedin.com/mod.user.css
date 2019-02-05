@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           LinkedIn Mod
 @description    Userstyle for LinkedIn
-@version        0.0.1
+@version        0.0.2
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -32,12 +32,24 @@
 	.EntityPhoto-circle-3-ghost-person,
 	.EntityPhoto-circle-4-ghost-person,
 	.EntityPhoto-circle-5-ghost-person,
-	.EntityPhoto-circle-6-ghost-person
+	.EntityPhoto-circle-6-ghost-person,
+	.EntityLockup-circle-3-ghost-person > figure i,
+	.EntityLockup-circle-3-ghost-person > figure img
 	{	border-radius: /*[[icon-roundness]]*/;	}
 
 /*** Upsell link removal ***/
 
 	.premium-upsell-link	{	display: none;	}
+}
+@-moz-document
+	url-prefix("https://www.linkedin.com/in/")
+{
+/*** Icons ***/
+
+	.pv-top-card-v2-section__photo-wrapper,
+	.profile-photo-edit,
+	.profile-photo-edit__preview
+	{	border-radius: /*[[icon-roundness]]*/;	}
 }
 @-moz-document
 	url-prefix("https://www.linkedin.com/feed")
