@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter Mod
 @description    Userstyle for Twitter
-@version        0.0.1
+@version        0.0.2
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -85,4 +85,21 @@
 		height: /*[[preview-size]]*/ !important;
 		width:  /*[[preview-size]]*/ !important;
 	}
+}
+
+@-moz-document
+	url-prefix("https://analytics.twitter.com/user/")
+{
+/*** Icons ***/
+
+	/* app.bundle.<ID>.css */
+	.ProfileHeader .ProfileHeader-cardAvatarLink,
+	.ProfileHeader .ProfileHeader-cardAvatarImage,
+	.tweet-container .tweet-avatar,
+	.profile-card-avatar-link,
+	.profile-card-avatar-image
+	{	border-radius: /*[[icon-roundness]]*/;	}
+
+	/* shared_navbar_style-<ID>.css */
+	li.SharedNavBar-navItem .avatar	{	border-radius: /*[[icon-roundness]]*/;	}
 }
