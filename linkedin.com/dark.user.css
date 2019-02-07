@@ -1,0 +1,122 @@
+/* ==UserStyle==
+@name           LinkedIn Dark
+@description    Userstyle for LinkedIn
+@version        0.0.1
+@author         Boian Berberov (https://github.com/bberberov)
+@license        EUPL-1.2
+@namespace      https://github.com/bberberov/userstyles
+@homepageURL    https://github.com/bberberov/userstyles
+@supportURL     https://github.com/bberberov/userstyles/issues
+@updateURL      https://raw.githubusercontent.com/bberberov/userstyles/master/linkedin.com/dark.user.css
+@preprocessor   uso
+
+@advanced color page-bg-color      "Page background color"      #222
+@advanced color page-fg-color      "Page foreground color"      rgba(221, 221, 221, 1)
+@advanced color faded-fg-color     "Faded foreground color"     rgba(136, 136, 136, 1)
+@advanced color card-bg-color      "Card background color"      #333
+@advanced color highlight-bg-color "Highlight background color" #111
+@advanced color hover-bg-color     "Hover background color"     #211
+==/UserStyle== */
+
+@-moz-document
+	domain("www.linkedin.com")
+{
+	.color-palette,
+	:root
+	{
+		--ui-typography-black:         /*[[page-fg-color]]*/;
+		--ui-typography-black--light: /*[[faded-fg-color]]*/;
+	}
+	:root,
+	body,
+	html
+	{	background-color: /*[[page-bg-color]]*/;	}
+
+/*** Text ***/
+	.large-header,
+	.large-text,
+	.medium-text,
+	.small-text,
+	body,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	p
+	{	color: /*[[page-fg-color]]*/;	}
+
+/*** Links ***/
+	.link-without-visited-state:not(:hover).t-black       	{	color:  /*[[page-fg-color]]*/;	}
+	.link-without-visited-state:not(:hover).t-black--light	{	color: /*[[faded-fg-color]]*/;	}
+
+/*** Buttons ***/
+	.button-tertiary-medium-round-muted	{	color: /*[[page-fg-color]]*/;	}
+
+/*** Hovercard ***/
+	.hovercard,
+	.hovercard-bottom,
+	.hovercard-left,
+	.hovercard-right,
+	.hovercard-top
+	{	background-color: /*[[card-bg-color]]*/;	}
+	.hovercard-bottom:after	{	border-bottom-color: /*[[card-bg-color]]*/;	}
+	.hovercard-left:after	{	border-left-color:   /*[[card-bg-color]]*/;	}
+	.hovercard-right:after	{	border-right-color:  /*[[card-bg-color]]*/;	}
+	.hovercard-top:after	{	border-top-color:    /*[[card-bg-color]]*/;	}
+
+/*** Messaging Bubble ***/
+	.msg-overlay-list-bubble,
+	.msg-overlay-bubble-header
+	{
+		background-color: /*[[card-bg-color]]*/;
+		background-image: none;
+	}
+}
+@-moz-document
+	url-prefix("https://www.linkedin.com/feed/")
+{
+/*** Left Rail - Feed Identity Module ***/
+	.container,
+	.entity-list-item
+	{	background-color: /*[[card-bg-color]]*/;	}
+	.profile-rail-card__member-photo	{
+		border-color: /*[[card-bg-color]]*/;
+		box-shadow: none;
+	}
+
+/*** Left Rail - Feed Shared Navigation Module ***/
+	.feed-shared-navigation-module,
+	.feed-shared-interest-package--v2 .feed-shared-interest-package__section-header
+	{	background-color: /*[[card-bg-color]]*/;	}
+
+/*** Feed - Share Box ***/
+	.share-box,
+	.share-box__article-cta
+	{	background-color: /*[[card-bg-color]]*/;	}
+
+/*** Feed - Items ***/
+	.feed-shared-update-v2,
+	.feed-shared-mini-update,
+	.comments-comment-box,
+	.comments-comment-item__replies-list .feed-shared-reply-item .see-more,
+	.comments-comments-list,
+	.feed-shared-first-prompt-block
+	{	background-color: /*[[card-bg-color]]*/;	}
+	.feed-shared-header__text-view a,
+	.feed-shared-update-v2__commentary
+	{	color: /*[[page-fg-color]]*/;	}
+	.feed-shared-article,
+	.feed-shared-image__container,
+	.feed-shared-image__container .lazy-image
+	{	background-color: /*[[highlight-bg-color]]*/;	}
+	.feed-shared-image--multi-image .feed-shared-image__image	{	border-color: /*[[card-bg-color]]*/;	}
+
+/*** Right Rail ***/
+	.feed-right-rail,
+	.feed-right-rail__container
+	{	background-color: /*[[card-bg-color]]*/;	}
+
+/*** Buttons ***/
+	.feed-shared-control-menu-trigger	{	color: /*[[page-fg-color]]*/;	}
+}
