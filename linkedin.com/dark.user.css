@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           LinkedIn Dark
 @description    Userstyle for LinkedIn
-@version        0.0.1
+@version        0.0.2
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -15,7 +15,8 @@
 @advanced color faded-fg-color     "Faded foreground color"     rgba(136, 136, 136, 1)
 @advanced color card-bg-color      "Card background color"      #333
 @advanced color highlight-bg-color "Highlight background color" #111
-@advanced color hover-bg-color     "Hover background color"     #211
+@advanced color hover-bg-color     "Hover background color"     #411
+@advanced color action-fg-color    "Action foreground color"    #c00
 ==/UserStyle== */
 
 @-moz-document
@@ -27,10 +28,13 @@
 		--ui-typography-black:         /*[[page-fg-color]]*/;
 		--ui-typography-black--light: /*[[faded-fg-color]]*/;
 	}
+
 	:root,
 	body,
 	html
 	{	background-color: /*[[page-bg-color]]*/;	}
+
+	hr	{	border-color: var(--ui-typography-black--light);	}
 
 /*** Text ***/
 	.large-header,
@@ -44,14 +48,107 @@
 	h4,
 	h5,
 	p
-	{	color: /*[[page-fg-color]]*/;	}
+	{	color: var(--ui-typography-black);	}
 
 /*** Links ***/
-	.link-without-visited-state:not(:hover).t-black       	{	color:  /*[[page-fg-color]]*/;	}
-	.link-without-visited-state:not(:hover).t-black--light	{	color: /*[[faded-fg-color]]*/;	}
+	.link-without-visited-state:not(:hover).t-black       	{	color: var(--ui-typography-black);	}
+	.link-without-visited-state:not(:hover).t-black--light	{	color: var(--ui-typography-black--light);	}
+	
+/*** Ghost Icons ***/
+	.EntityPhoto-circle-1-ghost-person,
+	.EntityPhoto-circle-2-ghost-person,
+	.EntityPhoto-circle-3-ghost-person,
+	.EntityPhoto-circle-4-ghost-person,
+	.EntityPhoto-circle-5-ghost-person,
+	.EntityPhoto-circle-6-ghost-person
+	.ghost-company,
+	.ghost-content,
+	.ghost-group,
+	.ghost-job,
+	.ghost-person,
+	.ghost-school,
+	.lazy-image
+	{	background-color: /*[[page-bg-color]]*/;	}
 
-/*** Buttons ***/
-	.button-tertiary-medium-round-muted	{	color: /*[[page-fg-color]]*/;	}
+/*** Cards ***/
+	.artdeco-card,
+	.container,
+	.container-with-shadow
+	{	background-color: /*[[card-bg-color]]*/;	}
+
+/*** Dropdown Menus ***/
+	.dropdown .dropdown-options	{	background-color: /*[[card-bg-color]]*/;	}
+
+/*** "Me" navbar dropdown menu ***/
+	.nav-settings__block	{	background-color: transparent;	}
+
+	.nav-item--profile .nav-dropdown__action a,
+	.nav-item--profile .nav-dropdown__item a
+	{	color: var(--ui-typography-black);}
+
+	.nav-settings__dropdown-title,
+	.nav-dropdown__title
+	{	background-color: /*[[highlight-bg-color]]*/;	}
+
+	.nav-settings__dropdown-options .nav-dropdown__action:hover,
+	.nav-settings__dropdown-options .nav-dropdown__item:hover
+	{	background-color: /*[[hover-bg-color]]*/;	}
+
+/*** Footer ***/
+	.nav-footer-links--compact .nav-footer__text-link	{	color: var(--ui-typography-black--light);	}
+
+/*** LinkedIn Logo ***/
+	li-icon[type="linkedin-logo"] .linkedin-text *	{	fill: var(--ui-typography-black--light);	}
+
+/*** Controls ***/
+	input[type="date"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="email"],
+	input[type="month"],
+	input[type="number"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="text"],
+	input[type="time"],
+	input[type="url"],
+	input[type="week"],
+	textarea
+	{
+		color: var(--ui-typography-black--light);
+		border-color: /*[[action-fg-color]]*/;
+	}
+	input[type="date"]:hover,
+	input[type="datetime"]:hover,
+	input[type="datetime-local"]:hover,
+	input[type="email"]:hover,
+	input[type="month"]:hover,
+	input[type="number"]:hover,
+	input[type="password"]:hover,
+	input[type="search"]:hover,
+	input[type="tel"]:hover,
+	input[type="text"]:hover,
+	input[type="time"]:hover,
+	input[type="url"]:hover,
+	input[type="week"]:hover,
+	textarea:hover
+	{
+		color: var(--ui-typography-black);
+		border-color: /*[[action-fg-color]]*/;
+	}
+
+	artdeco-tabs artdeco-tablist[role="tablist"] artdeco-tab[role="tab"],
+	artdeco-tabs artdeco-tablist[role="tablist"] artdeco-tab[role="tab"]:hover,
+	artdeco-tabs[theme="pro"] artdeco-tablist[role="tablist"] artdeco-tab[role="tab"]:hover
+	{	color: /*[[action-fg-color]]*/;	}
+
+	.artdeco-button--muted.artdeco-button--tertiary,
+	.artdeco-button--muted.artdeco-button--tertiary:visited,
+	.artdeco-button--muted.artdeco-button--tertiary:visited:hover,
+	.button-tertiary-small-round-muted,
+	.button-tertiary-medium-round-muted
+	{	color: /*[[action-fg-color]]*/;	}
 
 /*** Messaging Bubble ***/
 	.msg-overlay-list-bubble,
@@ -62,26 +159,126 @@
 	}
 }
 @-moz-document
+	url-prefix("https://www.linkedin.com/in/")
+{
+
+}
+@-moz-document
+	url-prefix("https://www.linkedin.com/me/profile-views/")
+{
+/*** Chart ***/
+	.me-wvmp-chart .highcharts-container .highcharts-background	{	fill: /*[[card-bg-color]]*/;	}
+
+	.me-wvmp-chart .highcharts-container .highcharts-markers path,
+	.me-wvmp-chart .highcharts-container .highcharts-axis-labels text
+	{
+		color: var(--ui-typography-black) !important;
+		fill: var(--ui-typography-black) !important;
+	}
+	.me-wvmp-chart .highcharts-container .highcharts-xaxis path,
+	.me-wvmp-chart .highcharts-container .highcharts-grid path
+	{	stroke: var(--ui-typography-black) !important;	}
+
+/*** Carousel ***/
+	.me-wvmp-pills-tab-carousel,
+	.me-wvmp-viewer-card,
+	.me-wvmp-mock-view.me-wvmp-viewer-card
+	{	background-color: /*[[card-bg-color]]*/;	}
+
+	.me-wvmp-viewer-card:hover,
+	.me-wvmp-mock-view.me-wvmp-viewer-card:hover
+	{	background-color: /*[[hover-bg-color]]*/;	}
+
+	.me-wvmp-mock-view__card {
+		filter: brightness(20%)
+	}
+
+	.me-wvmp-pills-tab--active .me-wvmp-pills-tab__icon
+	.me-wvmp-pills-tab--active .me-wvmp-pills-tab__text,
+	.me-wvmp-pills-tab--active:hover .me-wvmp-pills-tab__text
+	{	color: var(--ui-typography-black);	}
+
+	.me-wvmp-pills-tab__icon	{	color: var(--ui-typography-black--light);	}
+}
+@-moz-document
+	url-prefix("https://www.linkedin.com/mynetwork/")
+{
+/*** Left Rail ***/
+	.left-rail .mn-abi-form__container	{	background-color: /*[[highlight-bg-color]]*/;	}
+
+	.mn-community-summary__section,
+	.mn-summary-empty-state
+	{	border-color: var(--ui-typography-black--light);	}
+	
+/*** Invitations ***/
+	.invitation-card	{	background-color: /*[[highlight-bg-color]]*/;	}
+	.invitation-card__picture	{	background-color: transparent;	}
+
+	.mn-invitations-preview__manage-all,
+	.mn-invitations-preview__manage-all:active,
+	.mn-invitations-preview__manage-all:hover,
+	.mn-invitations-preview__manage-all:visited,
+	.mn-invitations-preview__manage-all:visited:active,
+	.mn-invitations-preview__manage-all:visited:hover
+	{	color: /*[[action-fg-color]]*/;	}
+
+	.invitation-card__custom-message .lt-line-clamp__less,
+	.invitation-card__custom-message .lt-line-clamp__less:active,
+	.invitation-card__custom-message .lt-line-clamp__less:hover,
+	.invitation-card__custom-message .lt-line-clamp__less:visited,
+	.invitation-card__custom-message .lt-line-clamp__less:visited:active,
+	.invitation-card__custom-message .lt-line-clamp__less:visited:hover,
+	.invitation-card__custom-message .lt-line-clamp__more,
+	.invitation-card__custom-message .lt-line-clamp__more:active,
+	.invitation-card__custom-message .lt-line-clamp__more:hover,
+	.invitation-card__custom-message .lt-line-clamp__more:visited,
+	.invitation-card__custom-message .lt-line-clamp__more:visited:active,
+	.invitation-card__custom-message .lt-line-clamp__more:visited:hover
+	{	color: var(--ui-accent-blue); }
+
+/*** Recommended for you ***/
+	.mn-discovery-tabs,
+	.mn-sub-nav
+	{	background-color: /*[[card-bg-color]]*/;	}
+}
+@-moz-document
 	url-prefix("https://www.linkedin.com/feed/")
 {
 /*** Left Rail - Feed Identity Module ***/
 	.container,
 	.entity-list-item
 	{	background-color: /*[[card-bg-color]]*/;	}
+
 	.profile-rail-card__member-photo	{
 		border-color: /*[[card-bg-color]]*/;
 		box-shadow: none;
 	}
+
+	.profile-rail-card__actor-meta	{	border-color: var(--ui-typography-black--light);	}
 
 /*** Left Rail - Feed Shared Navigation Module ***/
 	.feed-shared-navigation-module,
 	.feed-shared-interest-package--v2 .feed-shared-interest-package__section-header
 	{	background-color: /*[[card-bg-color]]*/;	}
 
+	.feed-shared-interest-package__entity-item,
+	.feed-shared-interest-package__entity-icon
+	{	color: var(--ui-typography-black--light);	}
+
+	.feed-shared-interest-package__section-header	{	background-color: /*[[highlight-bg-color]]*/;	}
+
+	.feed-shared-interest-package__section-header:hover,
+	.feed-shared-interest-package__entity-item:hover,
+	.feed-shared-interest-package__expand-collapse-cta-icon:active
+	{	background-color: /*[[hover-bg-color]]*/;	}
+
 /*** Feed - Share Box ***/
 	.share-box,
 	.share-box__article-cta
 	{	background-color: /*[[card-bg-color]]*/;	}
+
+/*** Feed - Sort dropdown ***/
+	.sort-dropdown__list-item-button:hover	{	background-color: /*[[hover-bg-color]]*/;	}
 
 /*** Feed - Items ***/
 	.feed-shared-update-v2,
@@ -91,14 +288,28 @@
 	.comments-comments-list,
 	.feed-shared-first-prompt-block
 	{	background-color: /*[[card-bg-color]]*/;	}
+
 	.feed-shared-header__text-view a,
 	.feed-shared-update-v2__commentary
-	{	color: /*[[page-fg-color]]*/;	}
+	{	color: var(--ui-typography-black);	}
+
+	.feed-shared-social-counts__item:not(:last-child)::after,
+	.feed-shared-social-counts__num-comments[disabled]
+	{	color: var(--ui-typography-black--light);	}
+
 	.feed-shared-article,
 	.feed-shared-image__container,
 	.feed-shared-image__container .lazy-image
 	{	background-color: /*[[highlight-bg-color]]*/;	}
+
 	.feed-shared-image--multi-image .feed-shared-image__image	{	border-color: /*[[card-bg-color]]*/;	}
+
+	.feed-shared-header,
+	.feed-shared-social-counts,
+	.feed-shared-linkedin-video__description-container,
+	.feed-shared-article--with-large-image .feed-shared-article__description-container,
+	.feed-shared-aggregated-content__list-item
+	{	border-color: var(--ui-typography-black--light);	}
 
 /*** Feed - Hovercard ***/
 	.hovercard,
@@ -111,13 +322,49 @@
 	.hovercard-left:after	{	border-left-color:   /*[[card-bg-color]]*/;	}
 	.hovercard-right:after	{	border-right-color:  /*[[card-bg-color]]*/;	}
 	.hovercard-top:after	{	border-top-color:    /*[[card-bg-color]]*/;	}
+
 	.entity-hovercard__insight-icon	{	color: var(--ui-typography-black--light);	}
 
 /*** Right Rail ***/
 	.feed-right-rail,
 	.feed-right-rail__container
-	{	background-color: /*[[card-bg-color]]*/;	}
+	{
+		background-color: /*[[card-bg-color]]*/;
+		border: none;
+		box-shadow: 0 0 0 1px rgba(0,0,0,.15),0 2px 3px rgba(0,0,0,.2);
+	}
 
 /*** Buttons ***/
-	.feed-shared-control-menu-trigger	{	color: /*[[page-fg-color]]*/;	}
+	.sort-dropdown__icon,
+	.feed-shared-control-menu-trigger
+	{	color: /*[[action-fg-color]]*/;	}
+}
+@-moz-document
+	url-prefix("https://www.linkedin.com/messaging/")
+{
+	.msg-messaging-container__core-rail,
+	.msg-title-bar__title-bar-title
+	{	background-color: /*[[card-bg-color]]*/;	}
+
+	.msg-conversations-container__convo-item-link.active	{	background-color: /*[[highlight-bg-color]]*/;	}
+
+	.msg-s-message-list__time-heading::after,
+	.msg-s-message-list__time-heading::before
+	{	border-color: var(--ui-typography-black--light);	}
+
+	.msg-s-event-listitem__body	{	color: var(--ui-typography-black--light);	}
+}
+@-moz-document
+	url-prefix("https://www.linkedin.com/notifications/")
+{
+	.nt-card	{	background-color: /*[[card-bg-color]]*/;	}
+
+	.nt-card--in-segment	{	border-color: var(--ui-typography-black--light);	}
+
+	.nt-card__content,
+	.nt-card-content__body--secondary
+	{	background-color: /*[[page-bg-color]]*/;	}
+
+	.nt-card-settings-dropdown__trigger-icon
+	{	color: /*[[action-fg-color]]*/;	}
 }
