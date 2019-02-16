@@ -69,7 +69,7 @@
 /*** Icons ***/
 	.msg-facepile-grid--no-facepile .msg-facepile-grid__img,
 	.msg-facepile-grid--group-size-2 .msg-facepile-grid__img,
-	.msg-facepile-grid__img,
+	.msg-facepile-grid__img
 	{	border-radius: /*[[icon-roundness]]*/;	}
 }
 @-moz-document
