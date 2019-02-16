@@ -53,18 +53,6 @@
 /*** Buttons ***/
 	.button-tertiary-medium-round-muted	{	color: /*[[page-fg-color]]*/;	}
 
-/*** Hovercard ***/
-	.hovercard,
-	.hovercard-bottom,
-	.hovercard-left,
-	.hovercard-right,
-	.hovercard-top
-	{	background-color: /*[[card-bg-color]]*/;	}
-	.hovercard-bottom:after	{	border-bottom-color: /*[[card-bg-color]]*/;	}
-	.hovercard-left:after	{	border-left-color:   /*[[card-bg-color]]*/;	}
-	.hovercard-right:after	{	border-right-color:  /*[[card-bg-color]]*/;	}
-	.hovercard-top:after	{	border-top-color:    /*[[card-bg-color]]*/;	}
-
 /*** Messaging Bubble ***/
 	.msg-overlay-list-bubble,
 	.msg-overlay-bubble-header
@@ -111,6 +99,19 @@
 	.feed-shared-image__container .lazy-image
 	{	background-color: /*[[highlight-bg-color]]*/;	}
 	.feed-shared-image--multi-image .feed-shared-image__image	{	border-color: /*[[card-bg-color]]*/;	}
+
+/*** Feed - Hovercard ***/
+	.hovercard,
+	.hovercard-bottom,
+	.hovercard-left,
+	.hovercard-right,
+	.hovercard-top
+	{	background-color: /*[[card-bg-color]]*/;	}
+	.hovercard-bottom:after	{	border-bottom-color: /*[[card-bg-color]]*/;	}
+	.hovercard-left:after	{	border-left-color:   /*[[card-bg-color]]*/;	}
+	.hovercard-right:after	{	border-right-color:  /*[[card-bg-color]]*/;	}
+	.hovercard-top:after	{	border-top-color:    /*[[card-bg-color]]*/;	}
+	.entity-hovercard__insight-icon	{	color: var(--ui-typography-black--light);	}
 
 /*** Right Rail ***/
 	.feed-right-rail,
