@@ -44,8 +44,16 @@
 {
 /*** Icons ***/
 	.pv-top-card-v2-section__photo-wrapper,
+	.pv-top-card-section__photo,
 	.profile-photo-edit,
 	.profile-photo-edit__preview
+	{	border-radius: /*[[icon-roundness]]*/;	}
+}
+@-moz-document
+	url-prefix("https://www.linkedin.com/mynetwork/")
+{
+/*** Icons ***/
+	.mn-discovery-person-card__image--with-coverphoto
 	{	border-radius: /*[[icon-roundness]]*/;	}
 }
 @-moz-document
@@ -54,4 +62,20 @@
 /*** Feed item expansion ***/
 	.feed-shared-inline-show-more-text	{	max-height: unset;	}
 	.feed-shared-inline-show-more-text .see-more	{	display: none;	}
+}
+@-moz-document
+	url-prefix("https://www.linkedin.com/messaging/")
+{
+/*** Icons ***/
+	.msg-facepile-grid--no-facepile .msg-facepile-grid__img,
+	.msg-facepile-grid--group-size-2 .msg-facepile-grid__img,
+	.msg-facepile-grid__img,
+	{	border-radius: /*[[icon-roundness]]*/;	}
+}
+@-moz-document
+	url-prefix("https://www.linkedin.com/notifications/")
+{
+/*** Icons ***/
+	.ivm-image-view-model__circular-img
+	{	border-radius: /*[[icon-roundness]]*/;	}
 }
