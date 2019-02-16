@@ -17,7 +17,6 @@
 	domain("www.linkedin.com")
 {
 /*** Icons ***/
-
 	.nav-item__profile-member-photo,
 	.EntityPhoto-circle-1,
 	.EntityPhoto-circle-2,
@@ -38,14 +37,12 @@
 	{	border-radius: /*[[icon-roundness]]*/;	}
 
 /*** Upsell link removal ***/
-
 	.premium-upsell-link	{	display: none;	}
 }
 @-moz-document
 	url-prefix("https://www.linkedin.com/in/")
 {
 /*** Icons ***/
-
 	.pv-top-card-v2-section__photo-wrapper,
 	.profile-photo-edit,
 	.profile-photo-edit__preview
@@ -55,7 +52,6 @@
 	url-prefix("https://www.linkedin.com/feed")
 {
 /*** Feed item expansion ***/
-
 	.feed-shared-inline-show-more-text	{	max-height: unset;	}
 	.feed-shared-inline-show-more-text .see-more	{	display: none;	}
 }
