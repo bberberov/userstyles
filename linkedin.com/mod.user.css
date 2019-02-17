@@ -58,13 +58,6 @@
 	{	border-radius: /*[[icon-roundness]]*/;	}
 }
 @-moz-document
-	url-prefix("https://www.linkedin.com/mynetwork/")
-{
-/*** Icons ***/
-	.mn-discovery-person-card__image--with-coverphoto
-	{	border-radius: /*[[icon-roundness]]*/;	}
-}
-@-moz-document
 	url-prefix("https://www.linkedin.com/feed")
 {
 /*** Feed item expansion ***/
@@ -72,7 +65,18 @@
 	.feed-shared-inline-show-more-text .see-more	{	display: none;	}
 }
 @-moz-document
+	url-prefix("https://www.linkedin.com/mynetwork/")
+{
+/*** Icons ***/
+	.mn-discovery-person-card__image--with-coverphoto
+	{	border-radius: /*[[icon-roundness]]*/;	}
+}
+@-moz-document
 	url-prefix("https://www.linkedin.com/messaging/")
+{
+}
+@-moz-document
+	url-prefix("https://www.linkedin.com/jobs/")
 {
 }
 @-moz-document

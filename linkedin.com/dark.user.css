@@ -201,47 +201,6 @@
 	.me-wvmp-pills-tab__icon	{	color: var(--ui-typography-black--light);	}
 }
 @-moz-document
-	url-prefix("https://www.linkedin.com/mynetwork/")
-{
-/*** Left Rail ***/
-	.left-rail .mn-abi-form__container	{	background-color: /*[[highlight-bg-color]]*/;	}
-
-	.mn-community-summary__section,
-	.mn-summary-empty-state
-	{	border-color: var(--ui-typography-black--light);	}
-	
-/*** Invitations ***/
-	.invitation-card	{	background-color: /*[[highlight-bg-color]]*/;	}
-	.invitation-card__picture	{	background-color: transparent;	}
-
-	.mn-invitations-preview__manage-all,
-	.mn-invitations-preview__manage-all:active,
-	.mn-invitations-preview__manage-all:hover,
-	.mn-invitations-preview__manage-all:visited,
-	.mn-invitations-preview__manage-all:visited:active,
-	.mn-invitations-preview__manage-all:visited:hover
-	{	color: /*[[action-fg-color]]*/;	}
-
-	.invitation-card__custom-message .lt-line-clamp__less,
-	.invitation-card__custom-message .lt-line-clamp__less:active,
-	.invitation-card__custom-message .lt-line-clamp__less:hover,
-	.invitation-card__custom-message .lt-line-clamp__less:visited,
-	.invitation-card__custom-message .lt-line-clamp__less:visited:active,
-	.invitation-card__custom-message .lt-line-clamp__less:visited:hover,
-	.invitation-card__custom-message .lt-line-clamp__more,
-	.invitation-card__custom-message .lt-line-clamp__more:active,
-	.invitation-card__custom-message .lt-line-clamp__more:hover,
-	.invitation-card__custom-message .lt-line-clamp__more:visited,
-	.invitation-card__custom-message .lt-line-clamp__more:visited:active,
-	.invitation-card__custom-message .lt-line-clamp__more:visited:hover
-	{	color: var(--ui-accent-blue); }
-
-/*** Recommended for you ***/
-	.mn-discovery-tabs,
-	.mn-sub-nav
-	{	background-color: /*[[card-bg-color]]*/;	}
-}
-@-moz-document
 	url-prefix("https://www.linkedin.com/feed/")
 {
 /*** Left Rail - Feed Identity Module ***/
@@ -340,6 +299,47 @@
 	{	color: /*[[action-fg-color]]*/;	}
 }
 @-moz-document
+	url-prefix("https://www.linkedin.com/mynetwork/")
+{
+/*** Left Rail ***/
+	.left-rail .mn-abi-form__container	{	background-color: /*[[highlight-bg-color]]*/;	}
+
+	.mn-community-summary__section,
+	.mn-summary-empty-state
+	{	border-color: var(--ui-typography-black--light);	}
+
+/*** Invitations ***/
+	.invitation-card	{	background-color: /*[[highlight-bg-color]]*/;	}
+	.invitation-card__picture	{	background-color: transparent;	}
+
+	.mn-invitations-preview__manage-all,
+	.mn-invitations-preview__manage-all:active,
+	.mn-invitations-preview__manage-all:hover,
+	.mn-invitations-preview__manage-all:visited,
+	.mn-invitations-preview__manage-all:visited:active,
+	.mn-invitations-preview__manage-all:visited:hover
+	{	color: /*[[action-fg-color]]*/;	}
+
+	.invitation-card__custom-message .lt-line-clamp__less,
+	.invitation-card__custom-message .lt-line-clamp__less:active,
+	.invitation-card__custom-message .lt-line-clamp__less:hover,
+	.invitation-card__custom-message .lt-line-clamp__less:visited,
+	.invitation-card__custom-message .lt-line-clamp__less:visited:active,
+	.invitation-card__custom-message .lt-line-clamp__less:visited:hover,
+	.invitation-card__custom-message .lt-line-clamp__more,
+	.invitation-card__custom-message .lt-line-clamp__more:active,
+	.invitation-card__custom-message .lt-line-clamp__more:hover,
+	.invitation-card__custom-message .lt-line-clamp__more:visited,
+	.invitation-card__custom-message .lt-line-clamp__more:visited:active,
+	.invitation-card__custom-message .lt-line-clamp__more:visited:hover
+	{	color: var(--ui-accent-blue); }
+
+/*** Recommended for you ***/
+	.mn-discovery-tabs,
+	.mn-sub-nav
+	{	background-color: /*[[card-bg-color]]*/;	}
+}
+@-moz-document
 	url-prefix("https://www.linkedin.com/messaging/")
 {
 	.msg-messaging-container__core-rail,
@@ -355,6 +355,10 @@
 	{	border-color: var(--ui-typography-black--light);	}
 
 	.msg-s-event-listitem__body	{	color: var(--ui-typography-black--light);	}
+}
+@-moz-document
+	url-prefix("https://www.linkedin.com/jobs/")
+{
 }
 @-moz-document
 	url-prefix("https://www.linkedin.com/notifications/")
