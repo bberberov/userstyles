@@ -343,7 +343,9 @@
 	url-prefix("https://www.linkedin.com/messaging/")
 {
 	.msg-messaging-container__core-rail,
-	.msg-title-bar__title-bar-title
+	.msg-title-bar__title-bar-title,
+	.msg-form,
+	.msg-form--thread .msg-form__footer
 	{	background-color: /*[[card-bg-color]]*/;	}
 
 	.msg-conversations-container__convo-item-link.active	{	background-color: /*[[highlight-bg-color]]*/;	}
