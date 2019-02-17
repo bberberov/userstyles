@@ -36,6 +36,14 @@
 	.EntityLockup-circle-3-ghost-person > figure img
 	{	border-radius: /*[[icon-roundness]]*/;	}
 
+/*** Messaging Bubble ***/
+	.msg-overlay-list-bubble .msg-facepile-grid.msg-facepile-grid--no-facepile .msg-facepile-grid__img,
+	                                           .msg-facepile-grid--no-facepile .msg-facepile-grid__img,
+	.msg-overlay-list-bubble .msg-facepile-grid.msg-facepile-grid--group-size-2 .msg-facepile-grid__img,
+	                                           .msg-facepile-grid--group-size-2 .msg-facepile-grid__img,
+	                                                                           .msg-facepile-grid__img
+	{	border-radius: /*[[icon-roundness]]*/;	}
+
 /*** Upsell link removal ***/
 	.premium-upsell-link	{	display: none;	}
 }
@@ -66,11 +74,6 @@
 @-moz-document
 	url-prefix("https://www.linkedin.com/messaging/")
 {
-/*** Icons ***/
-	.msg-facepile-grid--no-facepile .msg-facepile-grid__img,
-	.msg-facepile-grid--group-size-2 .msg-facepile-grid__img,
-	.msg-facepile-grid__img
-	{	border-radius: /*[[icon-roundness]]*/;	}
 }
 @-moz-document
 	url-prefix("https://www.linkedin.com/notifications/")
