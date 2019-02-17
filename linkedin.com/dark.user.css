@@ -340,6 +340,10 @@
 	{	background-color: /*[[card-bg-color]]*/;	}
 }
 @-moz-document
+	url-prefix("https://www.linkedin.com/jobs/")
+{
+}
+@-moz-document
 	url-prefix("https://www.linkedin.com/messaging/")
 {
 	.msg-messaging-container__core-rail,
@@ -355,10 +359,6 @@
 	{	border-color: var(--ui-typography-black--light);	}
 
 	.msg-s-event-listitem__body	{	color: var(--ui-typography-black--light);	}
-}
-@-moz-document
-	url-prefix("https://www.linkedin.com/jobs/")
-{
 }
 @-moz-document
 	url-prefix("https://www.linkedin.com/notifications/")

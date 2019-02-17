@@ -72,11 +72,11 @@
 	{	border-radius: /*[[icon-roundness]]*/;	}
 }
 @-moz-document
-	url-prefix("https://www.linkedin.com/messaging/")
+	url-prefix("https://www.linkedin.com/jobs/")
 {
 }
 @-moz-document
-	url-prefix("https://www.linkedin.com/jobs/")
+	url-prefix("https://www.linkedin.com/messaging/")
 {
 }
 @-moz-document
