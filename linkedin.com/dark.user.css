@@ -72,6 +72,7 @@
 
 /*** Cards ***/
 	.artdeco-card,
+	.artdeco-container-card,
 	.container,
 	.container-with-shadow
 	{	background-color: /*[[card-bg-color]]*/;	}
@@ -161,7 +162,31 @@
 @-moz-document
 	url-prefix("https://www.linkedin.com/in/")
 {
+	.pv-top-card-section__photo-wrapper,
+	.pv-entity__position-group-pager,
+	.pv-entity__position-group-role-item,
+	.pv-entity__position-group-role-item-fading-timeline,
+	.pv-profile-section.background-section.artdeco-container-card.pv-profile-section--reorder-enabled .pv-profile-section .pv-profile-section__card-item,
+	.pv-profile-section.background-section.artdeco-container-card.pv-profile-section--reorder-enabled .pv-profile-section .pv-profile-section__card-item-v2,
+	.pv-profile-section.background-section.artdeco-container-card.pv-profile-section--reorder-enabled .pv-profile-section .pv-profile-section__section-info-item
+	{	background-color: /*[[card-bg-color]]*/;	}
 
+	.pv-top-card-section__photo-wrapper
+	{	box-shadow: none;	}
+
+	.artdeco-carousel-slide,
+	.pv-treasury-item--compact,
+	.pv-treasury-item__image-container,
+	.pv-treasury-item__type-indicator
+	{	background-color: /*[[page-bg-color]]*/;	}
+
+	.pv-top-card-v2-section__icon,
+	.pv-dashboard-section__cta-icon
+	{	color: var(--ui-typography-black);	}
+
+	.pv-treasury-item__type-indicator,
+	.pv-treasury-item__type-icon
+	{	color: var(--ui-typography-black--light);	}
 }
 @-moz-document
 	url-prefix("https://www.linkedin.com/me/profile-views/")
