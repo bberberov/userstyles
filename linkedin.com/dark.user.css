@@ -289,7 +289,8 @@
 
 	.feed-shared-article,
 	.feed-shared-image__container,
-	.feed-shared-image__container .lazy-image
+	.feed-shared-image__container .lazy-image,
+	.feed-shared-linkedin-video__description-container
 	{	background-color: /*[[highlight-bg-color]]*/;	}
 
 	.feed-shared-image--multi-image .feed-shared-image__image	{	border-color: /*[[card-bg-color]]*/;	}
