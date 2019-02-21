@@ -374,6 +374,21 @@
 	{	background-color: /*[[card-bg-color]]*/;	}
 
 	.job-card--tile	{	background-color: /*[[page-bg-color]]*/;	}
+
+	.jobs-dream-companies__job-card-alert
+	{	background-color: /*[[highlight-bg-color]]*/;	}
+
+	.job-card__listed-status + .job-card__easy-apply::before,
+	.job-flavors__label
+	{	color: /*[[faded-fg-color]]*/;	}
+
+/*** Buttons ***/
+	.job-card__per-job-actions-button,
+	.job-card__dismiss-icon,
+	.peek-carousel-controls__button
+	{	color: /*[[action-fg-color]]*/;	}
+	.peek-carousel-controls__button[disabled]
+	{	color: /*[[faded-fg-color]]*/;	}
 }
 @-moz-document
 	url-prefix("https://www.linkedin.com/messaging/")
