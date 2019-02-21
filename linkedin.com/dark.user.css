@@ -144,6 +144,12 @@
 	artdeco-tabs[theme="pro"] artdeco-tablist[role="tablist"] artdeco-tab[role="tab"]:hover
 	{	color: /*[[action-fg-color]]*/;	}
 
+	artdeco-toggle label,
+	artdeco-toggle button::after
+	{	color: var(--ui-typography-black);	}
+	artdeco-toggle button
+	{	color: var(--ui-typography-black--light);	}
+
 	.artdeco-button--muted.artdeco-button--tertiary,
 	.artdeco-button--muted.artdeco-button--tertiary:visited,
 	.artdeco-button--muted.artdeco-button--tertiary:visited:hover,
@@ -432,4 +438,17 @@
 
 	.nt-card-settings-dropdown__trigger-icon
 	{	color: /*[[action-fg-color]]*/;	}
+}
+@-moz-document
+	url-prefix("https://www.linkedin.com/notifications/settings/")
+{
+	.nt-settings-list,
+	.nt-content .global-title
+	{	background-color: /*[[card-bg-color]]*/;	}
+
+	.nt-content .global-title-button
+	{	color: /*[[action-fg-color]]*/;	}
+
+	.nt-content .global-title-text
+	{	color: /*[[page-fg-color]]*/;	}
 }
