@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           LinkedIn Dark
 @description    Userstyle for LinkedIn
-@version        0.0.4
+@version        0.0.5
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -74,7 +74,8 @@
 	.artdeco-card,
 	.artdeco-container-card,
 	.container,
-	.container-with-shadow
+	.container-with-shadow,
+	.carousel-form .carousel-header
 	{	background-color: /*[[card-bg-color]]*/;	}
 
 /*** Dropdown Menus ***/
@@ -96,6 +97,7 @@
 	{	background-color: /*[[hover-bg-color]]*/;	}
 
 /*** Footer ***/
+	.nav-footer__container	{	background-color: transparent;	}
 	.nav-footer-links--compact .nav-footer__text-link	{	color: var(--ui-typography-black--light);	}
 
 /*** LinkedIn Logo ***/
@@ -144,6 +146,7 @@
 	artdeco-tabs[theme="pro"] artdeco-tablist[role="tablist"] artdeco-tab[role="tab"]:hover
 	{	color: /*[[action-fg-color]]*/;	}
 
+	label,
 	artdeco-toggle label,
 	artdeco-toggle button::after
 	{	color: var(--ui-typography-black);	}
@@ -193,6 +196,15 @@
 	.pv-treasury-item__type-indicator,
 	.pv-treasury-item__type-icon
 	{	color: var(--ui-typography-black--light);	}
+
+	.pe-form
+	{	background-color: /*[[card-bg-color]]*/;	}
+
+	.pe-top-card-form__photo-wrapper
+	{
+		border-color: /*[[card-bg-color]]*/;
+		box-shadow: none;
+	}
 }
 @-moz-document
 	url-prefix("https://www.linkedin.com/me/profile-views/")
@@ -374,8 +386,6 @@
 @-moz-document
 	url-prefix("https://www.linkedin.com/jobs/")
 {
-	.nav-footer__container	{	background-color: transparent;	}
-
 	.jobs-box,
 	.jobs-blended-container
 	{	background-color: /*[[card-bg-color]]*/;	}
