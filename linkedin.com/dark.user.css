@@ -37,6 +37,7 @@
 	hr	{	border-color: var(--ui-typography-black--light);	}
 
 /*** Text ***/
+	.t-black,
 	.large-header,
 	.large-text,
 	.medium-text,
@@ -47,8 +48,13 @@
 	h3,
 	h4,
 	h5,
-	p
+	p,
+	.artdeco-container-card .card-heading
 	{	color: var(--ui-typography-black);	}
+
+	.t-black--light,
+	.distance-badge
+	{	color: var(--ui-typography-black--light);	}
 
 /*** Links ***/
 	.link-without-visited-state:not(:hover).t-black       	{	color: var(--ui-typography-black);	}
@@ -177,7 +183,8 @@
 	.pv-entity__position-group-role-item-fading-timeline,
 	.pv-profile-section.background-section.artdeco-container-card.pv-profile-section--reorder-enabled .pv-profile-section .pv-profile-section__card-item,
 	.pv-profile-section.background-section.artdeco-container-card.pv-profile-section--reorder-enabled .pv-profile-section .pv-profile-section__card-item-v2,
-	.pv-profile-section.background-section.artdeco-container-card.pv-profile-section--reorder-enabled .pv-profile-section .pv-profile-section__section-info-item
+	.pv-profile-section.background-section.artdeco-container-card.pv-profile-section--reorder-enabled .pv-profile-section .pv-profile-section__section-info-item,
+	.pv-recent-activity-top-card
 	{	background-color: /*[[card-bg-color]]*/;	}
 
 	.pv-top-card-section__photo-wrapper
@@ -190,17 +197,23 @@
 	{	background-color: /*[[page-bg-color]]*/;	}
 
 	.pv-top-card-v2-section__icon,
-	.pv-dashboard-section__cta-icon
+	.pv-dashboard-section__cta-icon,
+	.pv-dashboard-section__metric-text,
+	.pv-entity__secondary-title,
+	.pv-browsemap-section__member-detail .actor-name-with-distance,
+	.pv-browsemap-section__member-detail .browsemap-headline
 	{	color: var(--ui-typography-black);	}
 
 	.pv-treasury-item__type-indicator,
-	.pv-treasury-item__type-icon
+	.pv-treasury-item__type-icon,
+	.pv-browsemap-section__member-detail .distance-badge
 	{	color: var(--ui-typography-black--light);	}
 
 	.pe-form
 	{	background-color: /*[[card-bg-color]]*/;	}
 
-	.pe-top-card-form__photo-wrapper
+	.pe-top-card-form__photo-wrapper,
+	.pv-recent-activity-top-card__member-photo
 	{
 		border-color: /*[[card-bg-color]]*/;
 		box-shadow: none;
@@ -263,7 +276,7 @@
 	.feed-shared-interest-package--v2 .feed-shared-interest-package__section-header
 	{	background-color: /*[[card-bg-color]]*/;	}
 
-	.feed-shared-interest-package__entity-item,
+	.feed-shared-interest-package__entity-link.feed-shared-interest-package__entity-link,
 	.feed-shared-interest-package__entity-icon
 	{	color: var(--ui-typography-black--light);	}
 
@@ -273,6 +286,8 @@
 	.feed-shared-interest-package__entity-item:hover,
 	.feed-shared-interest-package__expand-collapse-cta-icon:active
 	{	background-color: /*[[hover-bg-color]]*/;	}
+
+	.feed-shared-interest-package__header	{	color: var(--ui-typography-black);	}
 
 /*** Feed - Share Box ***/
 	.share-box,
@@ -387,6 +402,7 @@
 	url-prefix("https://www.linkedin.com/jobs/")
 {
 	.jobs-box,
+	.jobs-home-soho__search-box-container--textured,
 	.jobs-blended-container
 	{	background-color: /*[[card-bg-color]]*/;	}
 
@@ -395,9 +411,21 @@
 	.jobs-dream-companies__job-card-alert
 	{	background-color: /*[[highlight-bg-color]]*/;	}
 
+	.job-card__footer::before
+	{	border-color: var(--ui-typography-black--light);	}
+
+	.job-card__title,
+	.job-card__company-name
+	{	color: var(--ui-typography-black);	}
+
+	.jobs-box__sub-title--light,
+	.job-card__exact-location-icon,
+	.job-card__location,
+	.job-flavors__label,
+	.job-card__listed-status,
 	.job-card__listed-status + .job-card__easy-apply::before,
-	.job-flavors__label
-	{	color: /*[[faded-fg-color]]*/;	}
+	.job-card__easy-apply-text
+	{	color: var(--ui-typography-black--light);	}
 
 /*** Buttons ***/
 	.job-card__per-job-actions-button,
@@ -440,6 +468,8 @@
 	url-prefix("https://www.linkedin.com/notifications/")
 {
 	.nt-card	{	background-color: /*[[card-bg-color]]*/;	}
+
+	.nt-settings-summary	{	background-color: /*[[highlight-bg-color]]*/;	}
 
 	.nt-card--in-segment	{	border-color: var(--ui-typography-black--light);	}
 
