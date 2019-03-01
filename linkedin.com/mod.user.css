@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           LinkedIn Mod
 @description    Userstyle for LinkedIn
-@version        0.0.4
+@version        0.0.5
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -10,12 +10,19 @@
 @updateURL      https://raw.githubusercontent.com/bberberov/userstyles/master/linkedin.com/mod.user.css
 @preprocessor   uso
 
-@advanced range icon-roundness "Icon Roundness (%)" [ 0, 0, 50,5, '%']
+@advanced range icon-roundness "Icon Roundness (%)"               [   0,   0,  50, 5, '%']
+@advanced range job-card-width "Job Card Width (px)"              [ 252, 100, 300, 2, 'px']
+@advanced range job-card-hm    "Job Card Horizontal Spacing (px)" [  12,   2,  16, 2, 'px']
+@advanced range job-card-vm    "Job Card Vertical Spacing (px)"   [  12,   2,  16, 2, 'px']
 ==/UserStyle== */
 
 @-moz-document
 	domain("www.linkedin.com")
 {
+/*** Feed item expansion ***/
+	.feed-shared-inline-show-more-text	{	max-height: unset;	}
+	.feed-shared-inline-show-more-text .see-more	{	display: none;	}
+
 /*** Icons ***/
 	.nav-item__profile-member-photo,
 	.EntityPhoto-circle-1,
@@ -60,20 +67,43 @@
 @-moz-document
 	url-prefix("https://www.linkedin.com/feed")
 {
-/*** Feed item expansion ***/
-	.feed-shared-inline-show-more-text	{	max-height: unset;	}
-	.feed-shared-inline-show-more-text .see-more	{	display: none;	}
 }
 @-moz-document
 	url-prefix("https://www.linkedin.com/mynetwork/")
 {
 /*** Icons ***/
-	.mn-discovery-person-card__image--with-coverphoto
-	{	border-radius: /*[[icon-roundness]]*/;	}
+	.mn-discovery-person-card__image-link--with-coverphoto	{	color: inherit;	}
+
+	.mn-discovery-person-card__image--with-coverphoto,
+	.mn-discovery-person-card__image-ghost-1
+	{
+		border-width: 2px;
+		border-color: currentColor;
+		border-radius: /*[[icon-roundness]]*/;
+	}
 }
 @-moz-document
 	url-prefix("https://www.linkedin.com/jobs/")
 {
+	.jobs-boxes	{
+		max-width: 100%;
+		margin: 1em;
+	}
+
+	.job-card--carousel-item.job-card	{	    width: /*[[job-card-width]]*/;	}
+	#careers .jobs-jymbii__list-item 	{	max-width: /*[[job-card-width]]*/;	}
+
+	.job-card--tile.peek-carousel__card-item,
+	.job-card--tile
+	{
+		margin-left:  /*[[job-card-hm]]*/;
+		margin-right: /*[[job-card-hm]]*/;
+	}
+	.job-card--tile	{
+		margin-top:    /*[[job-card-vm]]*/;
+		margin-bottom: /*[[job-card-vm]]*/;
+	}
+
 	.jobs-upsell,
 	#careers .jobs-app-download-promo-card-wrapper
 	{	display: none;	}
