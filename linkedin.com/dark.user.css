@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           LinkedIn Dark
 @description    Userstyle for LinkedIn
-@version        0.0.7
+@version        0.0.8
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -54,6 +54,7 @@
 	.feed-shared-update-v2__commentary
 	{	color: var(--ui-typography-black);	}
 
+	artdeco-dropdown-item,
 	.t-black--light,
 	.distance-badge
 	{	color: var(--ui-typography-black--light);	}
@@ -79,15 +80,18 @@
 	{	background-color: /*[[page-bg-color]]*/;	}
 
 /*** Cards ***/
+	artdeco-modal,
+	artdeco-dropdown-content,
 	.artdeco-card,
 	.artdeco-container-card,
 	.container,
 	.container-with-shadow,
 	.feed-shared-update-v2,
-	.feed-shared-mini-update,
 	.carousel-form .carousel-header
 	{	background-color: /*[[card-bg-color]]*/;	}
 
+	.feed-shared-mini-update,
+	.feed-shared-mini-update-v2,
 	.feed-shared-article,
 	.feed-shared-image__container,
 	.feed-shared-image__container .lazy-image,
@@ -205,6 +209,14 @@
 	.pv-recent-activity-top-card__activity-info
 	{	background-color: /*[[card-bg-color]]*/;	}
 
+	.pv-skill-categories-section__expanded,
+	.pv-accomplishments-block--expanded
+	{	background-color: /*[[highlight-bg-color]]*/;	}
+
+	.info-not-shared, .pv-skill-categories-section__secondary-skill-heading,
+	.pv-accomplishment-entity--with-separator::after
+	{	border-color: /*[[faded-fg-color]]*/;	}
+
 	.pv-top-card-section__photo-wrapper
 	{	box-shadow: none;	}
 
@@ -221,12 +233,14 @@
 	.pv-browsemap-section__member-detail .actor-name-with-distance,
 	.pv-browsemap-section__member-detail .browsemap-headline,
 	.pv-profile-wrapper .pv-recent-activity-detail__right-rail .interest-grouping .pv-profile-section__card-heading,
-	.pv-profile-wrapper .pv-recent-activity-detail__right-rail .interest-grouping .pv-profile-section__card-item .pv-entity__summary-info h3
+	.pv-profile-wrapper .pv-recent-activity-detail__right-rail .interest-grouping .pv-profile-section__card-item .pv-entity__summary-info h3,
+	.pv-accomplishment-entity__title
 	{	color: var(--ui-typography-black);	}
 
 	.pv-treasury-item__type-indicator,
 	.pv-treasury-item__type-icon,
-	.pv-browsemap-section__member-detail .distance-badge
+	.pv-browsemap-section__member-detail .distance-badge,
+	.pv-accomplishment-entity__subtitle
 	{	color: var(--ui-typography-black--light);	}
 
 	.pe-form
@@ -470,6 +484,53 @@
 	.career-interests-upsell__char-count,
 	.career-interests__title
 	{	color: var(--ui-typography-black--light);	}
+
+/*** Job Search */
+	.jobs-search-two-pane__wrapper	{	background-color: /*[[page-bg-color]]*/;	}
+	
+	.job-card-search--is-active	{	background-color: /*[[highlight-bg-color]]*/;	}
+
+	.artdeco-entity-lockup--size-3 .artdeco-entity-lockup__title,
+	.artdeco-entity-lockup--size-3 .artdeco-entity-lockup__title--alt-link,
+	.artdeco-entity-lockup--size-4 .artdeco-entity-lockup__title,
+	.artdeco-entity-lockup--size-4 .artdeco-entity-lockup__title--alt-link,
+	.artdeco-entity-lockup--size-5 .artdeco-entity-lockup__title,
+	.artdeco-entity-lockup--size-5 .artdeco-entity-lockup__title--alt-link,
+	.job-card-search__company-name-link,
+	.job-card-search__company-name-link:visited,
+	.job-card-search__description-snippet,
+	.jobs-details-top-card__company-url:hover,
+	.jobs-details-job-summary__list-header,
+	.jobs-description-content__title
+	{	color: var(--ui-typography-black);	}
+
+	.jobs-search-two-pane__alerts-li-icon,
+	.job-card-search__location.job-card-search__location,
+	.jobs-details-top-card__company-url,
+	.jobs-details-job-summary
+	{	color: var(--ui-typography-black--light);	}
+
+/*** Job Description ***/
+	.jobs-top-card__company-logo-container	{
+		border-color: /*[[card-bg-color]]*/;
+		box-shadow: none;
+	}
+	.job-card--column .job-card__content-wrapper	{	border-color: /*[[faded-fg-color]]*/;	}
+
+	.jobs-top-card	{	background-color: /*[[card-bg-color]]*/;	}
+
+	#careers .browsemap .browsemap-title,
+	.jobs-top-card__company-url,
+	.jobs-box__sub-title,
+	.jobs-box__body,
+	.jobs-box__html-content p,
+	.jobs-box__list-item,
+	.jobs-box__html-content li,
+	.jobs-box__html-content ol,
+	.jobs-box__html-content ul,
+	.jobs-coworkers-classmates__flavor-label,
+	.jobs-coworkers-classmates__header
+	{	color: var(--ui-typography-black);	}
 
 /*** Buttons ***/
 	.job-card__per-job-actions-button,
