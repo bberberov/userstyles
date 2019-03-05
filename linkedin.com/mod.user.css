@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           LinkedIn Mod
 @description    Userstyle for LinkedIn
-@version        0.0.5
+@version        0.0.6
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -90,8 +90,14 @@
 		margin: 1em;
 	}
 
+	.jobs-search-two-pane__wrapper .neptune-grid	{	width: unset;	}
+	.jobs-search-two-pane__wrapper--two-pane .jobs-search-two-pane__results--responsive	{	width: 50%;	}
+	.job-card-search	{	padding: 0.5em;	}
+
 	.job-card--carousel-item.job-card	{	    width: /*[[job-card-width]]*/;	}
-	#careers .jobs-jymbii__list-item 	{	max-width: /*[[job-card-width]]*/;	}
+	#careers .jobs-jymbii__list-item,
+	.jobs-similar-jobs__list-item
+	{	max-width: /*[[job-card-width]]*/;	}
 
 	.job-card--tile.peek-carousel__card-item,
 	.job-card--tile
@@ -106,6 +112,22 @@
 
 	.jobs-upsell,
 	#careers .jobs-app-download-promo-card-wrapper
+	{	display: none;	}
+
+/*** Job Description ***/
+	.jobs-description--is-truncated .jobs-description__content--condensed,
+	.jobs-description--is-truncated .jobs-description__content,
+	.jobs-company--is-truncated .jobs-company__description
+	{
+		height: unset;
+		max-height: unset;
+		overflow: visible;
+	}
+	.jobs-description--is-truncated .jobs-description__container	{	padding-bottom: 16px;	}
+
+	.jobs-description--is-truncated .jobs-description__container::after,
+	.jobs-box--with-cta .cta-wrap,
+	.jobs-box--with-cta-large .cta-wrap
 	{	display: none;	}
 }
 @-moz-document
