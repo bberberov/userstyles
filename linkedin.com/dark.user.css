@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           LinkedIn Dark
 @description    Userstyle for LinkedIn
-@version        0.0.8
+@version        0.0.10
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -95,8 +95,17 @@
 	.feed-shared-article,
 	.feed-shared-image__container,
 	.feed-shared-image__container .lazy-image,
-	.feed-shared-linkedin-video__description-container
+	.feed-shared-linkedin-video__description-container,
+	.feed-shared-external-video__meta
 	{	background-color: /*[[highlight-bg-color]]*/;	}
+
+	.feed-shared-header,
+	.feed-shared-social-counts,
+	.feed-shared-linkedin-video__description-container,
+	.feed-shared-external-video__meta,
+	.feed-shared-article--with-large-image .feed-shared-article__description-container,
+	.feed-shared-aggregated-content__list-item
+	{	border-color: var(--ui-typography-black--light);	}
 
 	.feed-shared-inline-show-more-text .see-more	{	background-color: transparent;	}
 
@@ -347,13 +356,6 @@
 	.feed-shared-social-counts__item:not(:last-child)::after,
 	.feed-shared-social-counts__num-comments[disabled]
 	{	color: var(--ui-typography-black--light);	}
-
-	.feed-shared-header,
-	.feed-shared-social-counts,
-	.feed-shared-linkedin-video__description-container,
-	.feed-shared-article--with-large-image .feed-shared-article__description-container,
-	.feed-shared-aggregated-content__list-item
-	{	border-color: var(--ui-typography-black--light);	}
 
 /*** Feed - Hovercard ***/
 	.hovercard,
