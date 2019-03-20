@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GitHub Mod
 @description    Userstyle for GitHub
-@version        0.0.1
+@version        0.0.2
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -9,11 +9,20 @@
 @supportURL     https://github.com/bberberov/userstyles/issues
 @updateURL      https://raw.githubusercontent.com/bberberov/userstyles/master/github.com/mod.user.css
 @preprocessor   uso
+
+@advanced range files-vpad    "File Vist – Vertical Padding"   [ 6, 0, 16, 1, 'px']
+@advanced range files-hpad    "File Vist – Horizontal Padding" [ 3, 0, 16, 1, 'px']
+@advanced range blob-tab-size "Blob View – Tab Size"           [ 4, 2,  8, 1, '']
 ==/UserStyle== */
 
 @-moz-document
 	domain("github.com")
 {
+/*** Top Header ***/
+
+	/* frameworks-<ID>.css */
+	.Header-old	{	padding: 0.25em 0em !important;	}
+
 /*** Signup banner removal ***/
 
 	/* site-<ID>.css */
@@ -25,3 +34,20 @@
 	.stats-switcher-viewport	{	height: unset;	}
 	.stats-switcher-viewport.is-revealing-lang-stats .stats-switcher-wrapper	{	top: unset;	}
 }
+
+/*** File View ***/
+
+	/* github-<ID>.css */
+	table.files tr.up-tree,
+	table.files td
+	{	border: none;	}
+
+	table.files td {	padding: /*[[files-vpad]]*/ /*[[files-hpad]]*/;	}
+
+/*** Blob View ***/
+
+	/* github-<ID>.css */
+	.blob-wrapper > .tab-size	{
+		-moz-tab-size: /*[[blob-tab-size]]*/;
+		tab-size:      /*[[blob-tab-size]]*/;
+	}
