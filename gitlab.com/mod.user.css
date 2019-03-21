@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GitLab Mod
 @description    Userstyle for GitLab
-@version        0.0.1
+@version        0.0.2
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -19,7 +19,9 @@
 /*** Blob View ***/
 
 	/* application-<ID>.css */
-	.diff-file .diff-content .line_content	{
+	.file-content.code pre code .line,
+	.diff-file .diff-content .line_content
+	{
 		-moz-tab-size: /*[[blob-tab-size]]*/;
 		tab-size:      /*[[blob-tab-size]]*/;
 	}

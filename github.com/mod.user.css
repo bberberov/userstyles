@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GitHub Mod
 @description    Userstyle for GitHub
-@version        0.0.3
+@version        0.0.4
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -46,7 +46,9 @@
 /*** Blob View ***/
 
 	/* github-<ID>.css */
-	.blob-wrapper > .tab-size	{
+	.blob-wrapper > .tab-size,
+	.diff-table.tab-size
+	{
 		-moz-tab-size: /*[[blob-tab-size]]*/;
 		tab-size:      /*[[blob-tab-size]]*/;
 	}
