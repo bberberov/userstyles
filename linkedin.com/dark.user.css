@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           LinkedIn Dark
 @description    Userstyle for LinkedIn
-@version        0.0.10
+@version        0.0.11
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -51,10 +51,13 @@
 	p,
 	.artdeco-container-card .card-heading,
 	.feed-shared-header__text-view a,
-	.feed-shared-update-v2__commentary
+	.feed-shared-update-v2__commentary,
+	.feed-shared-update-v2--minimal-padding .feed-shared-update-v2__commentary
 	{	color: var(--ui-typography-black);	}
 
 	artdeco-dropdown-item,
+	artdeco-dropdown-item:not([disabled]):focus,
+	artdeco-dropdown-item:not([disabled]):hover,
 	.t-black--light,
 	.distance-badge
 	{	color: var(--ui-typography-black--light);	}
@@ -93,6 +96,7 @@
 	.feed-shared-mini-update,
 	.feed-shared-mini-update-v2,
 	.feed-shared-article,
+	.feed-shared-entity__content,
 	.feed-shared-image__container,
 	.feed-shared-image__container .lazy-image,
 	.feed-shared-linkedin-video__description-container,
@@ -381,6 +385,10 @@
 	}
 
 /*** Buttons ***/
+	.feed-shared-social-action-bar .button,
+	.feed-shared-social-action-bar a
+	{	background-color: transparent;	}
+
 	.sort-dropdown__icon,
 	.share-media-button__label--square,
 	.share-media-button__label--square:focus,
@@ -395,6 +403,18 @@
 	.feed-shared-social-action-bar a:hover
 	{	color: /*[[action-fg-color]]*/;	}
 
+	.feed-shared-control-menu__headline,
+	.feed-shared-control-menu__headline:focus,
+	.feed-shared-control-menu__headline:hover
+	{	color: var(--ui-typography-black) !important;	}
+
+	.feed-shared-control-menu__sub-headline,
+	.feed-shared-control-menu__sub-headline:focus,
+	.feed-shared-control-menu__sub-headline:hover
+	{	color: var(--ui-typography-black--light) !important;	}
+
+	.feed-shared-control-menu-content li:focus,
+	.feed-shared-control-menu-content li:hover,
 	.share-media-button__label--square:focus,
 	.share-media-button__label--square:hover,
 	.feed-shared-social-action-bar__action-btn.focus,
