@@ -118,7 +118,7 @@
 		}
 
 		/* github-<ID>.css */
-		.numbers-summary li
+		.numbers-summary li,
 		.repository-lang-stats ol.repository-lang-stats-numbers li
 		{	padding: 0em 1em 0em 0em;	}
 
@@ -169,7 +169,7 @@
 
 		/*----------------------------------------*/
 
-		.footer div {
+		.footer div	{
 			border-top: none !important;
 			margin: 0px !important;
 			padding: 0 !important;
