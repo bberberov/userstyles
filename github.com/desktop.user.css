@@ -1,0 +1,180 @@
+/* ==UserStyle==
+@name           GitHub Desktop
+@description    Desktop-specific userstyle for GitHub
+@version        0.0.1
+@author         Boian Berberov (https://github.com/bberberov)
+@license        EUPL-1.2
+@namespace      https://github.com/bberberov/userstyles
+@homepageURL    https://github.com/bberberov/userstyles
+@supportURL     https://github.com/bberberov/userstyles/issues
+@updateURL      https://raw.githubusercontent.com/bberberov/userstyles/master/github.com/desktop.user.css
+@preprocessor   uso
+==/UserStyle== */
+
+@-moz-document
+	domain("github.com")
+{
+	@media screen	{
+/*** Main elements on page ***/
+		.pagehead,
+		.container.new-discussion-timeline
+		{
+			margin: 0em;
+			width: 100%;
+		}
+		.pagehead	{
+			padding: 2px 1em 0px 1em !important;
+
+			line-height: 3em;
+			text-align: right;
+		}
+		.container.new-discussion-timeline	{	padding: 0em 1em !important;	}
+
+/*** .pagehead ***/
+		.pagehead > .repohead-details-container,
+		.pagehead > .reponav
+		{
+			display: inline-block !important;
+			padding: 0em !important;
+			width: auto;
+		}
+		.pagehead > .repohead-details-container	{
+			margin: 2px 0em;
+			float: left;
+		}
+		.pagehead > .repohead-details-container > .pagehead-actions,
+		.pagehead > .reponav
+		{	margin: 0em 0em 0em 2em;	}
+
+		.pagehead > .reponav	{
+			vertical-align: bottom;
+
+			line-height: 1em;
+		}
+
+		.pagehead > .reponav .reponav-item	{
+			display: inline-block;
+			padding: 0.5em 0.75em;
+			width: auto;
+		}
+
+/*** .container.new-discussion-timeline ***/
+		.repository-content > div[class=""],
+		.repository-content > div[class=""] div,
+		.repository-content > div[class="mb-3"],
+		.repository-content > div[class="mb-3"] div
+		{	display: inline;	}
+
+		.repository-content > #repo-meta-edit,
+		.repository-content > .repository-topics-container
+		{
+			display: inline-block;
+			margin: 2px 0em !important;
+			width: auto;
+		}
+		.repository-content > #repo-meta-edit span,
+		.repository-content > .repository-topics-container span
+		{	margin: 0em !important;	}
+
+		.repository-content > #repo-meta-edit span.btn-sm	{
+			margin: 0em 0em 0em 1em !important;
+			padding: 0em 0.5em !important;
+		}
+		.repository-content > .repository-topics-container span.btn-link
+		{	margin: 0em 0em 0em 1em !important;	}
+
+		.repository-content > #repo-meta-edit[open],
+		.repository-content > .repository-topics-container[open]
+		{	display: block;	}
+
+		.topic-tag	{
+			margin: 0em 0.25em;
+			padding: 0.25em 0.5em;
+		}
+
+		/*----------------------------------------*/
+
+		/* github-<ID>.css */
+		.stats-switcher-viewport	{	height: auto;	}
+		.stats-switcher-viewport .stats-switcher-wrapper	{	position: static;	}
+
+		/* github-<ID>.css */
+		.numbers-summary	{
+			display: inline-block;
+			padding: 0em 0em 0em 1em;
+			width: auto;
+		}
+
+		/* github-<ID>.css */
+		.numbers-summary .nolink,
+		.numbers-summary a
+		{	padding: 0em;	}
+
+		/* github-<ID>.css */
+		.repository-lang-stats	{
+			display: inline-block;
+			float: right;
+			width: auto;
+		}
+
+		/* github-<ID>.css */
+		.numbers-summary li
+		.repository-lang-stats ol.repository-lang-stats-numbers li
+		{	padding: 0em 1em 0em 0em;	}
+
+		/*----------------------------------------*/
+
+		/* github-<ID>.css */
+		.file-navigation,
+		.file-navigation.in-mid-page
+		{	margin: 2px 0em;	}
+
+		/* github-<ID>.css */
+		.file-navigation .branch-select-menu,
+		.file-navigation .BtnGroup
+		{	margin-bottom: 0em;	}
+
+		/* github-<ID>.css */
+		.file-navigation .branch-select-menu	{
+			display: inline-block;
+			float: left;
+			vertical-align: middle;
+		}
+
+		/*----------------------------------------*/
+
+		.branch-infobar,
+		.commit-tease
+		{	padding: 0.25em 0.5em;	}
+
+		.repository-content > .file-wrap,
+		.repository-content > #readme
+		{
+			display: inline-block;
+			height: calc(100vh - 5em);
+			margin: 0em;
+			overflow: hidden auto;
+			vertical-align: top;
+		}
+
+		.repository-content > .file-wrap	{	width: calc(60% - 2px );	}
+		.repository-content > #readme   	{	width: calc(40% - 2px );	}
+
+		.repository-content > .file-wrap:last-child	{
+			width: calc(100%);
+			columns: 2;
+		}
+
+		#readme .Box-body	{	padding: 0em;	}
+
+		/*----------------------------------------*/
+
+		.footer div {
+			border-top: none !important;
+			margin: 0px !important;
+			padding: 0 !important;
+
+			line-height: 3em;
+		}
+	}
+}
