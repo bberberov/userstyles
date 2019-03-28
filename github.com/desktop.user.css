@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GitHub Desktop
 @description    Desktop-specific userstyle for GitHub
-@version        0.0.1
+@version        0.0.2
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -153,9 +153,12 @@
 			display: inline-block;
 			height: calc(100vh - 5em);
 			margin: 0em;
-			overflow: hidden auto;
 			vertical-align: top;
 		}
+
+		.repository-content > .file-wrap,
+		.repository-content > #readme > .Box-body
+		{	overflow: auto;	}
 
 		.repository-content > .file-wrap	{	width: calc(60% - 2px );	}
 		.repository-content > #readme   	{	width: calc(40% - 2px );	}
@@ -165,7 +168,15 @@
 			columns: 2;
 		}
 
-		#readme .Box-body	{	padding: 0em;	}
+		.repository-content > #readme > .Box-header	{	height: 2em;	}
+
+		.repository-content > #readme > .Box-body	{
+			height: calc(100% - 2em + 1px);
+			border: none;
+		}
+
+		.repository-content > #readme > .Box-body > .markdown-body	{	padding: 0em 0.5em !important;	}
+		.repository-content > #readme > .Box-body > .plain > pre  	{	white-space: pre !important;	}
 
 		/*----------------------------------------*/
 
