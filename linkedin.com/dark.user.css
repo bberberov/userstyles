@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           LinkedIn Dark
 @description    Userstyle for LinkedIn
-@version        0.0.11
+@version        0.0.12
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -34,10 +34,13 @@
 	html
 	{	background-color: /*[[page-bg-color]]*/;	}
 
-	hr	{	border-color: var(--ui-typography-black--light);	}
+	.divider,
+	hr
+	{	border-color: var(--ui-typography-black--light);	}
 
 /*** Text ***/
 	.t-black,
+	.t-white,
 	.large-header,
 	.large-text,
 	.medium-text,
@@ -50,11 +53,15 @@
 	h5,
 	p,
 	.artdeco-container-card .card-heading,
+	.artdeco-hoverable-content--inverse-theme .artdeco-hoverable-content__reset-txt,
+	.artdeco-hoverable-content--inverse-theme .artdeco-hoverable-content__shell,
+	.artdeco-hoverable-content--inverse-theme .artdeco-hoverable-content__shell p,
 	.feed-shared-header__text-view a,
 	.feed-shared-update-v2__commentary,
 	.feed-shared-update-v2--minimal-padding .feed-shared-update-v2__commentary
 	{	color: var(--ui-typography-black);	}
 
+	.t-white--light,
 	artdeco-dropdown-item,
 	artdeco-dropdown-item:not([disabled]):focus,
 	artdeco-dropdown-item:not([disabled]):hover,
@@ -66,7 +73,7 @@
 	.link-without-visited-state:not(:hover).t-black       	{	color: var(--ui-typography-black);	}
 	.link-without-visited-state:not(:hover).t-black--light	{	color: var(--ui-typography-black--light);	}
 	
-/*** Ghost Icons ***/
+/*** Icons ***/
 	.EntityPhoto-circle-1-ghost-person,
 	.EntityPhoto-circle-2-ghost-person,
 	.EntityPhoto-circle-3-ghost-person,
@@ -82,9 +89,12 @@
 	.lazy-image
 	{	background-color: /*[[page-bg-color]]*/;	}
 
+	.EntityPhoto-circle-1-stackedFacepile	{	border-color: var(--ui-typography-black--light);	}
+
 /*** Cards ***/
 	artdeco-modal,
 	artdeco-dropdown-content,
+	.artdeco-hoverable-content--inverse-theme .artdeco-hoverable-content__shell,
 	.artdeco-card,
 	.artdeco-container-card,
 	.container,
@@ -92,6 +102,9 @@
 	.feed-shared-update-v2,
 	.carousel-form .carousel-header
 	{	background-color: /*[[card-bg-color]]*/;	}
+
+	.artdeco-hoverable-content--top-placement.artdeco-hoverable-content--inverse-theme
+		.artdeco-hoverable-content__arrow::after	{	border-top-color: /*[[card-bg-color]]*/;	}
 
 	.feed-shared-mini-update,
 	.feed-shared-mini-update-v2,
@@ -115,6 +128,11 @@
 
 	.feed-shared-image--multi-image .feed-shared-image__image	{	border-color: /*[[card-bg-color]]*/;	}
 
+	.presence-indicator           	{	background-color: /*[[highlight-bg-color]]*/;	}
+	.presence-indicator--is-online	{	background-color: #469a1f;	}
+	.presence-entity__indicator   	{	box-shadow: 0 0 0 2px /*[[card-bg-color]]*/;
+	}
+
 /*** Dropdown Menus ***/
 	.dropdown .dropdown-options	{	background-color: /*[[card-bg-color]]*/;	}
 
@@ -123,7 +141,7 @@
 
 	.nav-item--profile .nav-dropdown__action a,
 	.nav-item--profile .nav-dropdown__item a
-	{	color: var(--ui-typography-black);}
+	{	color: var(--ui-typography-black);	}
 
 	.nav-settings__dropdown-title,
 	.nav-dropdown__title
@@ -192,11 +210,97 @@
 	artdeco-toggle button
 	{	color: var(--ui-typography-black--light);	}
 
+	.feed-shared-social-action-bar .button,
+	.feed-shared-social-action-bar .button:focus,
+	.feed-shared-social-action-bar .button:hover
+	{	background-color: transparent;	}
+
+	.artdeco-button--secondary,
+	.artdeco-button--secondary:visited,
+	.artdeco-button--secondary:visited:hover,
+	a.artdeco-button--secondary,
+	.button-secondary-small,
+	.button-secondary-medium
+	{
+		border: 1px solid /*[[action-fg-color]]*/;
+		color: /*[[action-fg-color]]*/;
+		box-shadow: none;
+	}
+	.artdeco-button--secondary:focus,
+	.artdeco-button--secondary:hover,
+	.button-secondary-medium.focus,
+	.button-secondary-medium.hover-not-disabled,
+	.button-secondary-medium:focus,
+	.button-secondary-medium:hover:not(:disabled):not(.disabled),
+	.button-secondary-small.focus,
+	.button-secondary-small.hover-not-disabled,
+	.button-secondary-small:focus,
+	.button-secondary-small:hover:not(:disabled):not(.disabled)
+	{
+		background-color: /*[[hover-bg-color]]*/;
+		color: /*[[action-fg-color]]*/;
+		box-shadow: none;
+	}
+
+	.artdeco-button--muted.artdeco-button--secondary,
+	.artdeco-button--muted.artdeco-button--secondary:visited,
+	.artdeco-button--muted.artdeco-button--secondary:visited:hover
+	{
+		color: /*[[action-fg-color]]*/;
+		box-shadow: none;
+	}
+	.artdeco-button--muted.artdeco-button--secondary:focus,
+	.artdeco-button--muted.artdeco-button--secondary:hover
+	{
+		background-color: /*[[hover-bg-color]]*/;
+		color: /*[[action-fg-color]]*/;
+		box-shadow: none;
+	}
+
+	.artdeco-carousel-container .pagination-btns button,
+	.artdeco-button--tertiary,
+	.artdeco-button--tertiary:visited,
+	.artdeco-button--tertiary:visited:hover,
+	a.artdeco-button--tertiary,
 	.artdeco-button--muted.artdeco-button--tertiary,
 	.artdeco-button--muted.artdeco-button--tertiary:visited,
-	.artdeco-button--muted.artdeco-button--tertiary:visited:hover,
+	.button-tertiary-medium-muted,
+	.button-tertiary-medium-round,
+	.button-tertiary-medium-round-muted,
+	.button-tertiary-medium-round-muted:visited,
 	.button-tertiary-small-round-muted,
-	.button-tertiary-medium-round-muted
+	.button-tertiary-small-round-muted:visited
+	{	color: /*[[action-fg-color]]*/;	}
+	.artdeco-carousel-container .pagination-btns button.focus,
+	.artdeco-carousel-container .pagination-btns button.hover-not-disabled,
+	.artdeco-carousel-container .pagination-btns button:focus,
+	.artdeco-carousel-container .pagination-btns button:hover:not(:disabled):not(.disabled),
+	.artdeco-button--tertiary:focus,
+	.artdeco-button--tertiary:hover:not(:disabled):not(.disabled),
+	.artdeco-button--muted.artdeco-button--tertiary:focus,
+	.artdeco-button--muted.artdeco-button--tertiary:hover:not(:disabled):not(.disabled),
+	.button-tertiary-medium-muted:focus,
+	.button-tertiary-medium-muted:hover:not(:disabled):not(.disabled),
+	.button-tertiary-medium-round:focus,
+	.button-tertiary-medium-round:hover:not(:disabled):not(.disabled),
+	.button-tertiary-medium-round-muted:focus,
+	.button-tertiary-medium-round-muted:hover:not(:disabled):not(.disabled),
+	.button-tertiary-small-round-muted:focus,
+	.button-tertiary-small-round-muted:hover:not(:disabled):not(.disabled)
+	{
+		color: /*[[action-fg-color]]*/;
+		background-color: /*[[hover-bg-color]]*/;
+	}
+	.artdeco-button--muted.artdeco-button--disabled.artdeco-button--tertiary,
+	.artdeco-button--muted.artdeco-button--tertiary:disabled,
+	.artdeco-carousel-container .pagination-btns button.disabled,
+	.artdeco-carousel-container .pagination-btns button:disabled
+	{	color: var(--ui-typography-black--light);	}
+
+	.artdeco-hoverable-content--inverse-theme .artdeco-hoverable-content__close-btn,
+	.artdeco-hoverable-content--inverse-theme .artdeco-hoverable-content__close-btn:focus,
+	.artdeco-hoverable-content--inverse-theme .artdeco-hoverable-content__close-btn:hover,
+	.feed-shared-control-menu-trigger
 	{	color: /*[[action-fg-color]]*/;	}
 
 /*** Messaging Bubble ***/
@@ -205,6 +309,17 @@
 	{
 		background-color: /*[[card-bg-color]]*/;
 		background-image: none;
+	}
+	
+	.msg-overlay-bubble-header__control
+	{	color: /*[[action-fg-color]]*/;	}
+	.msg-overlay-bubble-header__control.focus,
+	.msg-overlay-bubble-header__control.hover-not-disabled,
+	.msg-overlay-bubble-header__control:focus,
+	.msg-overlay-bubble-header__control:hover:not(:disabled):not(.disabled)
+	{
+		color: /*[[action-fg-color]]*/;
+		background-color: /*[[hover-bg-color]]*/;
 	}
 }
 @-moz-document
@@ -218,14 +333,15 @@
 	.pv-profile-section.background-section.artdeco-container-card.pv-profile-section--reorder-enabled .pv-profile-section .pv-profile-section__card-item-v2,
 	.pv-profile-section.background-section.artdeco-container-card.pv-profile-section--reorder-enabled .pv-profile-section .pv-profile-section__section-info-item,
 	.pv-recent-activity-detail__header-container,
-	.pv-recent-activity-top-card,
-	.pv-recent-activity-top-card__activity-info
+	.pv-recent-activity-top-card
 	{	background-color: /*[[card-bg-color]]*/;	}
 
+	.pv-recent-activity-top-card__activity-info,
 	.pv-skill-categories-section__expanded,
 	.pv-accomplishments-block--expanded
 	{	background-color: /*[[highlight-bg-color]]*/;	}
 
+	.pv-recent-activity-top-card__extra-info,
 	.info-not-shared, .pv-skill-categories-section__secondary-skill-heading,
 	.pv-accomplishment-entity--with-separator::after
 	{	border-color: /*[[faded-fg-color]]*/;	}
@@ -265,6 +381,7 @@
 		border-color: /*[[card-bg-color]]*/;
 		box-shadow: none;
 	}
+	.pv-entity__extra-details .lt-line-clamp__more	{	color: /*[[action-fg-color]]*/;	}
 }
 @-moz-document
 	url-prefix("https://www.linkedin.com/me/profile-views/")
@@ -385,22 +502,11 @@
 	}
 
 /*** Buttons ***/
-	.feed-shared-social-action-bar .button,
-	.feed-shared-social-action-bar a
-	{	background-color: transparent;	}
-
 	.sort-dropdown__icon,
 	.share-media-button__label--square,
 	.share-media-button__label--square:focus,
 	.share-media-button__label--square:hover,
-	.feed-shared-control-menu-trigger,
-	.feed-shared-social-action-bar .button,
-	.feed-shared-social-action-bar__action-btn.focus,
-	.feed-shared-social-action-bar__action-btn.hover-not-disabled,
-	.feed-shared-social-action-bar__action-btn:focus,
-	.feed-shared-social-action-bar__action-btn:hover:not(:disabled):not(.disabled),
-	.feed-shared-social-action-bar a,
-	.feed-shared-social-action-bar a:hover
+	.feed-shared-news-module__toggle-icon
 	{	color: /*[[action-fg-color]]*/;	}
 
 	.feed-shared-control-menu__headline,
@@ -431,6 +537,7 @@
 
 	.mn-discovery-person-card--with-coverphoto.artdeco-card	{	background-color: /*[[page-bg-color]]*/;	}
 
+	.mn-community-summary__image-pile-container .mn-social-proof__profile-image,
 	.mn-community-summary__section,
 	.mn-summary-empty-state
 	{	border-color: var(--ui-typography-black--light);	}
@@ -462,6 +569,7 @@
 	{	color: var(--ui-accent-blue); }
 
 /*** Recommended for you ***/
+	.mn-discovery-cohorts__carousel-wrapper,
 	.mn-discovery-tabs,
 	.mn-sub-nav
 	{	background-color: /*[[card-bg-color]]*/;	}
@@ -496,6 +604,7 @@
 	.career-interests-upsell__content
 	{	color: var(--ui-typography-black);	}
 
+	.peek-carousel-controls__link,
 	.jobs-box__sub-title--light,
 	.job-card__exact-location-icon,
 	.job-card__location,
