@@ -44,13 +44,12 @@
 		}
 		.pagehead > .repohead-details-container > .pagehead-actions,
 		.pagehead > .reponav
-		{	margin: 0em 0em 0em 2em;	}
-
-		.pagehead > .reponav	{
-			vertical-align: bottom;
-
+		{
+			margin: 0em 0em 0em 2em;
 			line-height: 1em;
 		}
+
+		.pagehead > .reponav	{	vertical-align: bottom;	}
 
 		.pagehead > .reponav .reponav-item	{
 			display: inline-block;
