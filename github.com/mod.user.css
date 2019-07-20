@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GitHub Mod
 @description    Userstyle for GitHub
-@version        0.0.6
+@version        0.0.7
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -26,7 +26,7 @@
 /*** Signup banner removal ***/
 
 	/* site-<ID>.css */
-	.signup-prompt-bg	{	display: none;	}
+	.signup-prompt	{	display: none;	}
 
 /*** Repository Summary expansion ***/
 
