@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GitHub Desktop
 @description    Desktop-specific userstyle for GitHub
-@version        0.0.4
+@version        0.0.5
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -90,33 +90,6 @@
 
 		/*----------------------------------------*/
 
-		/* github-<ID>.css */
-		.stats-switcher-viewport	{	height: auto;	}
-		.stats-switcher-viewport .stats-switcher-wrapper	{	position: static;	}
-
-		/* github-<ID>.css */
-		.numbers-summary	{
-			display: inline-block;
-			padding: 0em 0em 0em 1em;
-			width: auto;
-		}
-
-		/* github-<ID>.css */
-		.numbers-summary .nolink,
-		.numbers-summary a
-		{	padding: 0em;	}
-
-		/* github-<ID>.css */
-		.repository-lang-stats	{
-			float: right;
-			width: auto;
-		}
-
-		/* github-<ID>.css */
-		.numbers-summary li,
-		.repository-lang-stats ol.repository-lang-stats-numbers li
-		{	padding: 0em 1em 0em 0em;	}
-
 		/*----------------------------------------*/
 
 		/* github-<ID>.css */
@@ -131,9 +104,7 @@
 
 		/*----------------------------------------*/
 
-		.branch-infobar,
-		.commit-tease
-		{	padding: 0.25em 0.5em;	}
+		.commit-tease	{	padding: 0.25em 0.5em;	}
 
 		.repository-content > .file-wrap,
 		.repository-content > #readme

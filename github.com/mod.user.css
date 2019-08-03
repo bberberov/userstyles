@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GitHub Mod
 @description    Userstyle for GitHub
-@version        0.0.8
+@version        0.0.9
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -33,8 +33,29 @@
 /*** Repository Summary expansion ***/
 
 	/* github-<ID>.css */
-	.stats-switcher-viewport	{	height: auto;	}
-	.stats-switcher-viewport .stats-switcher-wrapper	{	position: static;	}
+	.repository-lang-stats-graph .language-color	{	line-height: 2;	}
+
+	details:not([open]) > summary > .repository-lang-stats-graph	{	display: block !important;	}
+
+	details:not([open]) > summary > .repository-lang-stats-graph .language-color	{
+		display: block !important;
+
+		font-weight: 600;
+		text-indent: 0.25em;
+		text-shadow:
+			-1px -1px 1px rgba(255,255,255,0.75),
+			 1px -1px 1px rgba(255,255,255,0.75),
+			-1px  1px 1px rgba(255,255,255,0.75),
+			 1px  1px 1px rgba(255,255,255,0.75),
+			-2px -2px 2px rgba(255,255,255,1),
+			 2px -2px 2px rgba(255,255,255,1),
+			-2px  2px 2px rgba(255,255,255,1),
+			 2px  2px 2px rgba(255,255,255,1)
+		;
+	}
+
+	details:not([open]) > summary > .repository-lang-stats-graph .language-color:not(:first-child)
+	{	border: none;	}
 
 /*** File View ***/
 
