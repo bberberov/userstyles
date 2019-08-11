@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           LinkedIn Dark
 @description    Userstyle for LinkedIn
-@version        0.0.12
+@version        0.0.13
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -52,7 +52,18 @@
 	h4,
 	h5,
 	p,
+	artdeco-modal-header h1,
+	artdeco-modal-header h2,
+	artdeco-modal-header h3,
+	artdeco-modal-header h4,
+	artdeco-modal-header h5,
+	artdeco-modal-header h6,
 	.artdeco-container-card .card-heading,
+	.artdeco-toast-item__message,
+	a.artdeco-toast-item__cta,
+	a.artdeco-toast-item__cta:hover,
+	a.artdeco-toast-item__cta:visited,
+	a.artdeco-toast-item__cta:visited:hover,
 	.artdeco-hoverable-content--inverse-theme .artdeco-hoverable-content__reset-txt,
 	.artdeco-hoverable-content--inverse-theme .artdeco-hoverable-content__shell,
 	.artdeco-hoverable-content--inverse-theme .artdeco-hoverable-content__shell p,
@@ -99,6 +110,7 @@
 	.artdeco-container-card,
 	.container,
 	.container-with-shadow,
+	.artdeco-toast-item,
 	.feed-shared-update-v2,
 	.carousel-form .carousel-header
 	{	background-color: /*[[card-bg-color]]*/;	}
@@ -111,7 +123,8 @@
 	.feed-shared-article,
 	.feed-shared-entity__content,
 	.feed-shared-image__container,
-	.feed-shared-image__container .lazy-image,
+	.lazy-image,
+	.lazy-image.loaded,
 	.feed-shared-linkedin-video__description-container,
 	.feed-shared-external-video__meta
 	{	background-color: /*[[highlight-bg-color]]*/;	}
@@ -135,6 +148,9 @@
 
 /*** Dropdown Menus ***/
 	.dropdown .dropdown-options	{	background-color: /*[[card-bg-color]]*/;	}
+
+/*** Reactions Menus ***/
+	.reactions-menu	{	background-color: /*[[card-bg-color]]*/;	}
 
 /*** "Me" navbar dropdown menu ***/
 	.nav-settings__block	{	background-color: transparent;	}
@@ -210,6 +226,7 @@
 	artdeco-toggle button
 	{	color: var(--ui-typography-black--light);	}
 
+	.feed-shared-social-action-bar,
 	.feed-shared-social-action-bar .button,
 	.feed-shared-social-action-bar .button:focus,
 	.feed-shared-social-action-bar .button:hover
@@ -257,6 +274,7 @@
 		box-shadow: none;
 	}
 
+	artdeco-modal .artdeco-dismiss,
 	.artdeco-carousel-container .pagination-btns button,
 	.artdeco-button--tertiary,
 	.artdeco-button--tertiary:visited,
@@ -271,6 +289,10 @@
 	.button-tertiary-small-round-muted,
 	.button-tertiary-small-round-muted:visited
 	{	color: /*[[action-fg-color]]*/;	}
+	artdeco-modal .artdeco-dismiss.focus,
+	artdeco-modal .artdeco-dismiss.hover-not-disabled,
+	artdeco-modal .artdeco-dismiss:focus,
+	artdeco-modal .artdeco-dismiss:hover:not(:disabled):not(.disabled),
 	.artdeco-carousel-container .pagination-btns button.focus,
 	.artdeco-carousel-container .pagination-btns button.hover-not-disabled,
 	.artdeco-carousel-container .pagination-btns button:focus,
@@ -468,15 +490,19 @@
 	.sort-dropdown__list-item-button:hover	{	background-color: /*[[hover-bg-color]]*/;	}
 
 /*** Feed - Items ***/
-	.comments-comment-box,
 	.comments-comment-item__replies-list .feed-shared-reply-item .see-more,
-	.comments-comments-list,
+	.feed-shared-update--chat-ui .comments-comment-box,
+	.feed-shared-update--chat-ui .comments-comments-list,
 	.feed-shared-first-prompt-block
 	{	background-color: /*[[card-bg-color]]*/;	}
 
-	.feed-shared-social-counts__item:not(:last-child)::after,
-	.feed-shared-social-counts__num-comments[disabled]
+	.social-details-social-counts__item:not(:last-child)::after,
+	.social-details-social-counts__num-comments[disabled]
 	{	color: var(--ui-typography-black--light);	}
+
+	.social-details-social-counts,
+	.comments-comment-social-bar__vertical-divider
+	{	border-color: var(--ui-typography-black--light);	}
 
 /*** Feed - Hovercard ***/
 	.hovercard,
