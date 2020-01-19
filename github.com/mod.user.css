@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GitHub Mod
 @description    Userstyle for GitHub
-@version        0.0.9
+@version        0.0.10
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -10,19 +10,15 @@
 @updateURL      https://raw.githubusercontent.com/bberberov/userstyles/master/github.com/mod.user.css
 @preprocessor   uso
 
-@advanced range files-vpad    "File List – Vertical Padding"   [ 6, 0, 16, 1, 'px']
-@advanced range files-hpad    "File List – Horizontal Padding" [ 3, 0, 16, 1, 'px']
-@advanced range blob-tab-size "Blob View – Tab Size"           [ 4, 2,  8, 1, '']
+@advanced range files-vpad    "File List – Vertical Padding"   [   6,   0,  16,   1, 'px']
+@advanced range files-hpad    "File List – Horizontal Padding" [   3,   0,  16,   1, 'px']
+@advanced range blob-tab-size "Blob View – Tab Size"           [   4,   2,   8,   1, '']
+@advanced range blob-line-h   "Blob View – Line Height"        [ 1.6, 1.0,   3, 0.1, '']
 ==/UserStyle== */
 
 @-moz-document
 	domain("github.com")
 {
-/*** Top Header ***/
-
-	/* frameworks-<ID>.css */
-	.Header-old	{	padding: 0.25em 0em !important;	}
-
 /*** Signup banner removal ***/
 
 	/* site-<ID>.css */
@@ -33,7 +29,7 @@
 /*** Repository Summary expansion ***/
 
 	/* github-<ID>.css */
-	.repository-lang-stats-graph .language-color	{	line-height: 2;	}
+	.repository-lang-stats-graph .language-color	{	line-height: 1.8;	}
 
 	details:not([open]) > summary > .repository-lang-stats-graph	{	display: block !important;	}
 
@@ -41,7 +37,7 @@
 		display: block !important;
 
 		font-weight: 600;
-		text-indent: 0.25em;
+		text-indent: 0.4em;
 		text-shadow:
 			-1px -1px 1px rgba(255,255,255,0.75),
 			 1px -1px 1px rgba(255,255,255,0.75),
@@ -56,6 +52,9 @@
 
 	details:not([open]) > summary > .repository-lang-stats-graph .language-color:not(:first-child)
 	{	border: none;	}
+
+	/* github-<ID>.css */
+	.commit-tease .avatar	{	margin-top: 0px;	}
 
 /*** File View ***/
 
@@ -75,4 +74,12 @@
 		-moz-tab-size: /*[[blob-tab-size]]*/;
 		tab-size:      /*[[blob-tab-size]]*/;
 	}
+
+	.blob-num,
+	.blob-code
+	{
+		line-height: /*[[blob-line-h]]*/;
+		vertical-align: baseline;
+	}
+	.blob-num-expandable + .blob-code	{	vertical-align: middle;	}
 }
