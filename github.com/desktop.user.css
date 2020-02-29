@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GitHub Desktop
 @description    Desktop-specific userstyle for GitHub
-@version        0.0.9
+@version        0.0.10
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -160,7 +160,10 @@
 
 		/*----------------------------------------*/
 
-		.repository-content > .file-navigation + div,
+		.branch-infobar	{	padding: 0.25em 0.5em;	}
+
+		.repository-content > .file-navigation + .Box,
+		.repository-content > .branch-infobar  + .Box,
 		.repository-content > #readme
 		{
 			display: inline-block;
@@ -169,17 +172,26 @@
 			vertical-align: top;
 		}
 
-		.repository-content > .file-navigation + div	{	overflow: auto;	}
+		.repository-content > .file-navigation + .Box,
+		.repository-content > .branch-infobar  + .Box
+		{
+			overflow: auto;
+			width: calc(60% - 2px );
+		}
 
-		.repository-content > .file-navigation + div	{	width: calc(60% - 2px );	}
-		.repository-content > #readme               	{	width: calc(40% - 2px );	}
+		.repository-content > #readme
+		{	width: calc(40% - 2px );	}
 
-		.repository-content > .file-navigation + div:last-child	{
+		.repository-content > .file-navigation + .Box:last-child,
+		.repository-content > .branch-infobar  + .Box:last-child
+		{
 			width: calc(100%);
 			columns: 2;
 		}
 
-		.repository-content > .file-navigation + div > :first-child	{
+		.repository-content > .file-navigation + .Box > :first-child,
+		.repository-content > .branch-infobar  + .Box > :first-child
+		{
 			border-right: none;
 			margin-right: 0px;
 		}
