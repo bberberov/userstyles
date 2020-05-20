@@ -90,14 +90,20 @@
 			padding: 0em 0em 0em 1em !important;
 		}
 
+		.repohead > :first-child > *	{	z-index: 1;	}
+
 		.repohead .fork-flag,
 		.repohead .mirror-flag
 		{	text-align: right;	}
 
 		.repohead > .reponav	{
-			display: inline-block !important;
-			margin: 1em 0em 0em 2em;
+			margin: 0em !important;
 			padding: 0em !important;
+		}
+
+		.repohead > .reponav > ul	{
+			display: inline-flex;
+			margin: 1em 0em 0em 2em;
 			line-height: 1em;
 			vertical-align: bottom;
 		}
@@ -184,16 +190,15 @@
 
 		.repository-content > .file-navigation + .Box:last-child,
 		.repository-content > .branch-infobar  + .Box:last-child
-		{
-			width: calc(100%);
-			columns: 2;
-		}
+		{	width: calc(100%);	}
 
 		.repository-content > .file-navigation + .Box > :first-child,
 		.repository-content > .branch-infobar  + .Box > :first-child
 		{
 			border-right: none;
 			margin-right: 0px;
+			position: sticky !important;
+			top: -1px;
 		}
 
 		.Box--condensed .Box-footer,
@@ -202,7 +207,7 @@
 
 		.Box--condensed .Box-body	{
 			height: calc(100% - 2em + 1px);
-			padding: 0em;
+			padding: 0em !important;
 			border: none;
 		}
 
@@ -216,12 +221,13 @@
 		{	margin-top:    0.5em !important;	}
 		.Box--condensed .Box-body > .markdown-body > :last-child
 		{	margin-bottom: 0.5em !important;	}
-		.Box--condensed .Box-body > .plain > pre  	{	white-space: pre !important;	}
+		.Box--condensed .Box-body > .plain > pre	{
+			padding: 0.5em 0em;
+			white-space: pre !important;
+		}
 
 		/* frameworks-<ID>.css */
-		.Box-header	{
-			padding: 0.25em 0.5em;
-		}
+		.Box-header	{	padding: 0.25em 0.5em;	}
 
 		.Box-row .lh-condensed > .text-small	{
 			float: right;
