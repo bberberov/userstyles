@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GitHub Mod
 @description    Userstyle for GitHub
-@version        0.0.11
+@version        0.0.12
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -100,7 +100,7 @@
 	{	border: none;	}
 
 	/* github-<ID>.css */
-	.commit-tease .avatar	{	margin-top: 0px;	}
+	.commit-tease .avatar	{	margin-top: 1px;	}
 
 /*** File View ***/
 
