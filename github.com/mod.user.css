@@ -10,10 +10,12 @@
 @updateURL      https://raw.githubusercontent.com/bberberov/userstyles/master/github.com/mod.user.css
 @preprocessor   uso
 
-@advanced range files-vpad    "File List – Vertical Padding"   [   6,   0,  16,   1, 'px']
-@advanced range files-hpad    "File List – Horizontal Padding" [   3,   0,  16,   1, 'px']
-@advanced range blob-tab-size "Blob View – Tab Size"           [   4,   2,   8,   1, '']
-@advanced range blob-line-h   "Blob View – Line Height"        [ 1.6, 1.0,   3, 0.1, '']
+@advanced range files-vpad     "File List – Vertical Padding"   [   6,   0,  16,   1, 'px']
+@advanced range files-hpad     "File List – Horizontal Padding" [   3,   0,  16,   1, 'px']
+@advanced range blob-tab-size  "Blob View – Tab Size"           [   4,   2,   8,   1, ''  ]
+@advanced range blob-line-h    "Blob View – Line Height"        [ 1.6, 1.0,   3, 0.1, ''  ]
+@advanced range blob-font-size "Blob View – Font Size"          [   9,   6,  24,   1, 'pt']
+
 ==/UserStyle== */
 
 @-moz-document
@@ -36,6 +38,11 @@
 		vertical-align: baseline;
 	}
 	.blob-num-expandable + .blob-code	{	vertical-align: middle;	}
+
+	.blob-num,
+	.blob-code-inner
+	{	font-size: /*[[blob-font-size]]*/;	}
+
 }
 
 @-moz-document
