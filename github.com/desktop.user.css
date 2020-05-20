@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GitHub Desktop
 @description    Desktop-specific userstyle for GitHub
-@version        0.0.10
+@version        0.0.11
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -229,8 +229,13 @@
 		/* frameworks-<ID>.css */
 		.Box-header	{	padding: 0.25em 0.5em;	}
 
-		.Box-row .lh-condensed > .text-small	{
-			float: right;
+		.Box-row .lh-condensed > .labels	{	margin: 0em 1em;	}
+
+		.Box-row .lh-condensed > .text-small	{	float: right;	}
+
+		.Box-row .lh-condensed > .text-small > .issue-milestone	{
+			float: left;
+			margin: 0em 1em;
 		}
 	}
 }
