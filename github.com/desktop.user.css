@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GitHub Desktop
 @description    Desktop-specific userstyle for GitHub
-@version        0.0.11
+@version        0.0.12
 @author         Boian Berberov (https://github.com/bberberov)
 @license        EUPL-1.2
 @namespace      https://github.com/bberberov/userstyles
@@ -9,6 +9,9 @@
 @supportURL     https://github.com/bberberov/userstyles/issues
 @updateURL      https://raw.githubusercontent.com/bberberov/userstyles/master/github.com/desktop.user.css
 @preprocessor   uso
+
+@advanced range files-width "File List – Width" [60, 30, 70, 5, '%']
+
 ==/UserStyle== */
 
 @-moz-document
@@ -182,11 +185,11 @@
 		.repository-content > .branch-infobar  + .Box
 		{
 			overflow: auto;
-			width: calc(60% - 2px );
+			width: calc( /*[[files-width]]*/ - 2px );
 		}
 
 		.repository-content > #readme
-		{	width: calc(40% - 2px );	}
+		{	width: calc( 100% - /*[[files-width]]*/ - 2px );	}
 
 		.repository-content > .file-navigation + .Box:last-child,
 		.repository-content > .branch-infobar  + .Box:last-child
