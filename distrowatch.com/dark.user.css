@@ -1,0 +1,291 @@
+/* ==UserStyle==
+@name           DistroWatch Dark
+@description    Userstyle for DistroWatch
+@version        0.0.1
+@author         Boian Berberov (https://github.com/bberberov)
+@license        EUPL-1.2
+@namespace      https://github.com/bberberov/userstyles
+@homepageURL    https://github.com/bberberov/userstyles
+@supportURL     https://github.com/bberberov/userstyles/issues
+@updateURL      https://raw.githubusercontent.com/bberberov/userstyles/master/distrowatch.com/dark.user.css
+@preprocessor   uso
+
+@advanced color page-bg-color  "Page background color"   #111
+@advanced color page-fg-color  "Page foreground color"   #ddd
+@advanced color head1-bg-color "Header background color" #333
+@advanced color head2-bg-color "Header background color" #0b3b24
+@advanced color card-bg-color  "Card background color"   #222
+@advanced color border-color   "Border color"            #333
+@advanced color link-color     "Link color"              #9b0
+@advanced color hover-color    "Link hover color"        #dd6
+@advanced color quote-color    "Quote color"             #6cf
+@advanced color red-color      "Red color"               #f22
+@advanced color green-color    "Green color"             #0d0
+==/UserStyle== */
+
+@-moz-document
+	domain("distrowatch.com")
+{
+	body {
+		background-color: /*[[page-bg-color]]*/;
+		color: /*[[page-fg-color]]*/;
+	}
+
+	body > table[style]	{
+		background-color: /*[[page-bg-color]]*/ !important;
+		border-color: /*[[border-color]]*/ !important;
+	}
+
+	body > table:first-child table	{
+		background-color: /*[[page-bg-color]]*/ !important;
+		border-color: /*[[border-color]]*/ !important;
+	}
+
+	body > table:first-child td.NewsLogo	{
+		background-color: /*[[page-bg-color]]*/ !important;
+	}
+
+	body > table:first-child img[title^="DistroWatch"]	{
+		background-color: #f6edc8 !important;
+	}
+
+	span	{	color: /*[[green-color]]*/;	}
+	span.Quote	{	color: /*[[quote-color]]*/;	}
+
+	table.DistroWatch	{
+		background-color: /*[[head1-bg-color]]*/;
+		border: 2px silver groove;
+	}
+
+	tr.Background	{	background-color: /*[[card-bg-color]]*/;	}
+
+	th	{	border-color: /*[[border-color]]*/;	}
+
+	th.phr1	{	background-color: /*[[head1-bg-color]]*/;	}
+
+	th.News {	background-color: /*[[head1-bg-color]]*/;	}
+
+	td	{	border-color: /*[[border-color]]*/;	}
+
+	td.News1	{
+		border-color: /*[[border-color]]*/;
+		background-color: /*[[card-bg-color]]*/;
+	}
+
+	td.phr2,
+	td.phr3
+	{
+		border-color: /*[[border-color]]*/;
+		background-color: /*[[head1-bg-color]]*/;
+	}
+
+	td.phr3	img[alt="="]	{	filter: invert(80%);	}
+
+	th.NavMenu,
+	th.NavMenuRTL
+	{
+		border-color: /*[[border-color]]*/;
+		background-color: /*[[card-bg-color]]*/;
+	}
+
+	th.Invert	{
+		background-color: /*[[head2-bg-color]]*/;
+		color: /*[[page-fg-color]]*/;
+	}
+
+	td.Invert	{
+		background-color: /*[[head2-bg-color]]*/;
+		color: /*[[page-fg-color]]*/;
+		border-color: /*[[border-color]]*/;
+	}
+
+	td.News	{
+		border-color: /*[[border-color]]*/;
+		background-color: /*[[head1-bg-color]]*/ !important;
+	}
+
+	td.NewsDate,
+	td.NewsHeadline
+	{
+		border-color: /*[[border-color]]*/;
+		background-color: /*[[head1-bg-color]]*/;
+		color: /*[[page-fg-color]]*/;
+	}
+
+	td.NewsDate font,
+	td.NewsHeadline font
+	{	color: /*[[page-fg-color]]*/ !important;	}
+
+	td.NewsLogo,
+	td.NewsText
+	{
+		background-color: /*[[card-bg-color]]*/ !important;
+		border-color: /*[[border-color]]*/;
+	}
+
+	td.List	{
+		background-color: /*[[head1-bg-color]]*/;
+		border-color: /*[[border-color]]*/;
+	}
+
+	td.Introduction	{
+		background-color: /*[[card-bg-color]]*/;
+		border-color: /*[[border-color]]*/;
+	}
+
+	td.Introduction1	{
+		background-color: /*[[head1-bg-color]]*/;
+		border-color: /*[[border-color]]*/;
+	}
+
+	td.Logo	{	border-color: /*[[border-color]]*/;	}
+	td.Info	{	border-color: /*[[border-color]]*/ !important;	}
+
+	input	{
+		background-color: /*[[card-bg-color]]*/;
+		color: /*[[link-color]]*/;
+	}
+	input[type="text"]	{	color: /*[[page-fg-color]]*/;	}
+
+	select	{
+		background-color: /*[[card-bg-color]]*/;
+		border-color: /*[[border-color]]*/;
+		color: /*[[link-color]]*/;
+	}
+
+	textarea	{
+		background-color: /*[[card-bg-color]]*/;
+		color: /*[[page-fg-color]]*/;
+	}
+
+	a	{	color: /*[[link-color]]*/;	}
+	a:hover	{	color: /*[[hover-color]]*/;	}
+}
+
+@-moz-document
+	url("https://distrowatch.com/")
+{
+	.ImageBorder	{	border: 1px solid black;	}
+
+	th.News1 {	background-color: /*[[card-bg-color]]*/;	}
+
+	th.cx {
+		color: /*[[page-fg-color]]*/;
+		background-color: #333333
+	}
+
+	td.NoBorder {	background-color: #fdffe3	}
+
+	td.cx {
+		border-color: /*[[border-color]]*/;
+		color: /*[[page-fg-color]]*/;
+		background-color: #333333;
+	}
+
+	a.cx:link,
+	a.cx:visited,
+	a.cx:hover,
+	a.cx:active
+	{	color: /*[[link-color]]*/;	}
+}
+
+@-moz-document
+	url-prefix("https://distrowatch.com/table.php"),
+	url("https://distrowatch.com/packages.php")
+{
+	font[color="red"]  	{	color: /*[[red-color]]*/;	}
+	font[color="green"]	{	color: /*[[green-color]]*/;	}
+
+	span.Current	{	color: /*[[green-color]]*/;	}
+
+	span.Beta {
+		color: /*[[red-color]]*/;
+		border: none;
+	}
+
+	th.TablesTitle	{
+		background-color: /*[[card-bg-color]]*/;
+		border-color: /*[[border-color]]*/;
+	}
+
+	td.TablesInvert	{
+		background-color: /*[[head2-bg-color]]*/;
+		color: /*[[page-fg-color]]*/;
+	}
+
+	td.TablesTitle	{
+		background-color: /*[[card-bg-color]]*/;
+		border-color: /*[[border-color]]*/;
+	}
+	
+	td.Current	{	color: /*[[green-color]]*/;	}
+
+	td.Beta	{
+		color: /*[[red-color]]*/;
+		border-style: dashed;
+		border-color: /*[[red-color]]*/;
+	}
+
+	td.Note	{
+		background-color: /*[[card-bg-color]]*/;
+		border-color: /*[[border-color]]*/;
+	}
+}
+
+@-moz-document
+	url-prefix("https://distrowatch.com/weekly.php"),
+	url-prefix("https://distrowatch.com/dwres.php")
+{
+	p.Update	{	color: /*[[page-fg-color]]*/;	}
+
+	span.Code	{	color: /*[[page-fg-color]]*/;	}
+
+	span.Current	{	color: /*[[green-color]]*/;	}
+	span.Beta   	{	color: /*[[red-color]]*/	}
+	span.Update 	{	color: /*[[page-fg-color]]*/;	}
+
+	th.TablesInvert	{
+		background-color: /*[[head2-bg-color]]*/;
+		color: /*[[page-fg-color]]*/;
+	}
+
+	td.TablesTitle	{
+		background-color: /*[[card-bg-color]]*/;
+		border-color: /*[[border-color]]*/;
+	}
+
+	td.NoBorder {
+		width: 100%;
+		background-color: /*[[page-bg-color]]*/;
+	}
+
+	td.Current	{	color: /*[[green-color]]*/;	}
+	td.Beta   	{	color: /*[[red-color]]*/;	}
+
+	td.Question	{
+		background-color: /*[[card-bg-color]]*/;
+		color: #603b0b;
+	}
+
+	td.Answer	{	background-color: /*[[card-bg-color]]*/;	}
+
+	td.rTitle	{
+		color: /*[[page-fg-color]]*/;
+		background-color: /*[[head1-bg-color]]*/;
+	}
+
+	td.rTitle2	{
+		background-color: /*[[head1-bg-color]]*/;;
+		color: /*[[page-fg-color]]*/;
+	}
+
+	td.rTitle3	{
+		background-color: /*[[head1-bg-color]]*/;;
+		color: #A52A2A;
+	}
+
+	td.rStory,
+	td.rStory2,
+	.Background
+	{	background-color: /*[[card-bg-color]]*/;	}
+}
